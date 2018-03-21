@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weather creation-date="2018-02-12 14:40:49 GMT-2"><HEADER>Погода в Калининграде</HEADER><fact_basic>
+&lt;time class="time fact__time" datetime="2018-02-12 14:43+0200"&gt;Сейчас 14:43&lt;/time&gt;&lt;i class="icon icon_color_light icon_thumb_ovc fact__icon" aria-hidden="true"&gt;&lt;/i&gt;&lt;div class="temp fact__temp"&gt;
+&lt;span class="temp__value"&gt;+1&lt;/span&gt;&lt;span class="temp__unit i-font i-font_face_yandex-sans-text-medium"&gt;°&lt;/span&gt;
+&lt;/div&gt;
+</fact_basic><fact_condition>Пасмурно</fact_condition><feels_like><label>Ощущается как</label><value>−2°</value></feels_like><yesterday><label>Вчера в это время</label><value>−1°</value></yesterday><props><item0><label>Ветер</label><value>1,0 м/с, Ю</value></item0><item1><label>Давление</label><value>754 мм рт. ст.</value></item1><item2><label>Влажность</label><value>90%</value></item2></props></weather>

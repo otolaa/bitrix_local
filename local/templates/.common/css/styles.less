@@ -1,0 +1,115 @@
+/* CSS font */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic); 
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);  
+
+html{ position: relative; min-height: 100%; }
+html, body { font-family: "PT Sans Narrow", Arial, Tahoma, Sans-Serif; font-size:16px;}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 30px;  
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  /*background-color:#eee;*/  
+}
+
+/* Footer */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color:#101010;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container .text-muted {
+  margin: 20px 0px 0px 0px;
+  color:#fff;
+}
+/* end footer */
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+/* jumbotron */
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .container .jumbotron {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 30px;
+	margin-top:10px;
+  }
+}
+
+.jumbotron{ padding-top:10px; padding-bottom:10px; background-color:#eee; margin-bottom:10px;}
+.jumbotron h1,
+.jumbotron .h1 {
+  color: inherit;
+  font-size: 30px;
+  margin-top:10px;
+}
+.jumbotron p{ font-size:18px;}
+/* end jumbotron */
+
+/* btn */
+.btn{ border-radius:2px; }
+.form-control{ border-radius: 2px; }
+.panel{ border-radius: 2px; }
+.panel-heading{border-top-right-radius:0px; border-top-left-radius:0px;}
+.alert{ border-radius: 2px; }
+
+/*.page-header*/
+.page-header{ margin:15px 0px 15px;}
+
+/**/
+.navbar-inverse{ text-transform: uppercase;
+.navbar-brand{ font-weight: bold; }
+}
+
+
+.breadcrumb{
+  border-radius: 2px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; margin-right: 15px; }
+
+font.errortext {
+  color: #a94442 !important;
+}
+.errortext{ display: block;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent; }
+
+div.news-line .specBox{
+  margin-bottom: 20px;
+  .preTxt{ color: #777; }
+}
+
+div.catalog-section-list{ margin-bottom: 15px; }
+.alert { margin-top: 20px; }

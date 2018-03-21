@@ -1,0 +1,308 @@
+div.current-weather{ margin-bottom:20px; }
+
+/**/
+.t_c_-40,.t_c_cold{background-color:#bbd5e9}
+.t_c_-36,.t_c_-37,.t_c_-38,.t_c_-39{background-color:#c0d7ea}
+.t_c_-32,.t_c_-33,.t_c_-34,.t_c_-35{background-color:#c5daea}
+.t_c_-28,.t_c_-29,.t_c_-30,.t_c_-31{background-color:#caddeb}
+.t_c_-24,.t_c_-25,.t_c_-26,.t_c_-27{background-color:#d0dfec}
+.t_c_-20,.t_c_-21,.t_c_-22,.t_c_-23{background-color:#d5e2ec}
+.t_c_-16,.t_c_-17,.t_c_-18,.t_c_-19{background-color:#dae5ed}
+.t_c_-12,.t_c_-13,.t_c_-14,.t_c_-15{background-color:#e0e7ee}
+.t_c_-10,.t_c_-11,.t_c_-8,.t_c_-9{background-color:#e5eaee}
+.t_c_-4,.t_c_-5,.t_c_-6,.t_c_-7{background-color:#eaedef}
+.t_c_-1,.t_c_-2,.t_c_-3,.t_c_0{background-color:#f0eff0}
+.t_c_1,.t_c_2{background-color:#f0f0ec}
+.t_c_3,.t_c_4{background-color:#f1f0e9}
+.t_c_5,.t_c_6{background-color:#f2f0e6}
+.t_c_7,.t_c_8{background-color:#f3f1e3}
+.t_c_10,.t_c_9{background-color:#f4f1e0}
+.t_c_11,.t_c_12{background-color:#f5f2dc}
+.t_c_13,.t_c_14{background-color:#f5f2d9}
+.t_c_15,.t_c_16{background-color:#f6f3d6}
+.t_c_17,.t_c_18{background-color:#f7f3d3}
+.t_c_19,.t_c_20{background-color:#f8f4d0;}
+.t_c_21,.t_c_22{background-color:#f8f1c8}
+.t_c_23,.t_c_24{background-color:#f9eec0}
+.t_c_25,.t_c_26{background-color:#f9ebb9}
+.t_c_27,.t_c_28{background-color:#f9e8b1}
+.t_c_29,.t_c_30{background-color:#fae5aa}
+.t_c_31,.t_c_32{background-color:#fae3a3}
+.t_c_33,.t_c_34{background-color:#fae09c}
+.t_c_35,.t_c_36{background-color:#fbde96}
+.t_c_37,.t_c_38{background-color:#fbdb8f}
+.t_c_39,.t_c_40{background-color:#fbd988}
+.t_c_41,.t_c_42{background-color:#fcd682}
+.t_c_43,.t_c_44{background-color:#fcd47b}
+.t_c_hot{background-color:#fcd174}
+/**/
+
+.current-weather__col {
+    position: relative;
+    display: inline-block;
+    min-width: 42px;
+    height: 97px;
+    padding: 8px 10px;
+    vertical-align: top;
+}
+
+.current-weather__col_type_now {
+    position: relative;
+    min-width: 85px;
+    padding-right: 10px;
+    padding-left: 76px;
+    line-height: 58px;
+}
+
+.current-weather__col_type_now .icon {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    margin: 8px 5px 2px;
+}
+
+.current-weather__thermometer_type_now {
+    position: absolute;
+    bottom: 9px;
+    left: 14px;
+    padding: 0 0 7px;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.current-weather__thermometer_type_after {
+    padding-left: 4px;
+    font-size: 18px;
+}
+
+.current-weather__thermometer-name {
+    display: block;
+    margin: -23px -2px 18px;
+    text-transform: capitalize;
+    font: 11px/12px Tahoma,Geneva,Kalimati,sans-serif;
+    color: #333;
+}
+
+.current-weather__col_type_after .icon {
+    margin: 10px 1px 18px;
+}
+
+.current-weather__info-label {
+    color: #797979;
+}
+
+.current-weather__info-row {
+    min-width: 162px;
+    margin-bottom: 7px;
+    font-size: 13px;
+    color: #333;
+}
+
+.current-weather__info-label_type_sunset {
+    margin-left: 11px;
+}
+
+.current-weather__info-row_type_time {
+    margin-top: 11px;
+    font-size: 11px;
+    color: #797979;
+}
+
+.current-weather__comment {
+    display: inline-block;
+    max-width: 120px;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 12px;
+}
+
+
+.current-weather__water .icon_thumb_water {
+    position: relative;
+    top: 0px;
+    left: 6px;
+}
+
+.current-weather__info-row_type_wind .icon {
+    margin-top: 2px;
+}
+
+/* ul */
+.forecast-brief {
+    position: relative;
+    display: block;
+    width: 100%;
+	margin:0px 0px;
+    margin-bottom: 47px;
+    padding: 0 0 30px;
+    white-space: nowrap;
+}
+
+.forecast-brief__item {
+    display: inline-block;
+    width: 9.9%;
+    min-width: 85px;
+    padding-bottom: 20px;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.forecast-brief__item_gap {
+    width: 7px!important;
+    min-width: 7px;
+}
+
+.forecast-brief__item-day-name {
+    display: block;
+    padding: 0 8px 4px;
+    font-size: 24px;
+}
+
+.forecast-brief__item-day {
+    display: block;
+    overflow: hidden;
+    padding: 0 8px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.forecast-brief__item .icon {
+    margin-left: 14px;
+    padding: 5px 0 6px;
+}
+
+.forecast-brief__item-comment {
+    padding: 0 8px 0 14px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.forecast-brief__item-temp-day {
+    position: absolute;
+    bottom: 20px;
+    width: 9.9%;
+    margin-left: 0;
+    padding: 7px 0 12px 14px;
+    font-size: 16px;
+}
+
+.forecast-brief__item-temp-night {
+    position: absolute;
+    bottom: 0;
+    width: 9.9%;
+    padding: 4px 0 8px;
+    text-indent: 14px;
+    color: #6d6e6e;
+}
+
+.forecast-brief__item-description {
+    margin: 0;
+    padding-bottom: 10px;	
+}
+
+.forecast-brief__item-description:before {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 9.9%;
+    height: 100%;
+    margin-left: 0;
+    content: '';
+	background-color: #f8f4d0;
+}
+/**/
+
+
+.icon_size_15 {
+    width: 15px;
+    height: 15px;
+}
+
+.icon_size_48, .icon_color_dark {
+    width: 48px;
+    height: 48px;
+}
+
+.icon_size_30 {
+    width: 30px;
+    height: 30px;
+}
+
+.icon_size_12 {
+    width: 12px;
+    height: 12px;
+}
+
+.icon {
+    display: inline-block;
+    background: 50% no-repeat;
+}
+
+.icon_wind {
+    vertical-align: top;
+    background-image: url(//yastatic.net/weather/i/wind/arrow.svg);
+}
+
+.icon_thumb_water {
+    background-image: url(//yastatic.net/weather/i/icons/svg/water.svg);
+}
+
+.icon_thumb_bkn-p-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+ra_d.svg)}
+.icon_thumb_bkn-p-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+ra_n.svg)}
+.icon_thumb_bkn-p-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+sn_d.svg)}
+.icon_thumb_bkn-p-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+sn_n.svg)}
+.icon_thumb_bkn-m-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-ra_d.svg)}
+.icon_thumb_bkn-m-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-ra_n.svg)}
+.icon_thumb_bkn-m-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-sn_d.svg)}
+.icon_thumb_bkn-m-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-sn_n.svg)}
+.icon_thumb_bkn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_d.svg)}
+.icon_thumb_bkn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_n.svg)}
+.icon_thumb_bkn-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_ra_d.svg)}
+.icon_thumb_bkn-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_ra_n.svg)}
+.icon_thumb_bkn-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_sn_d.svg)}
+.icon_thumb_bkn-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_sn_n.svg)}
+.icon_thumb_ovc{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc.svg)}
+.icon_thumb_ovc-p-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_+ra.svg)}
+.icon_thumb_ovc-p-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_+sn.svg)}
+.icon_thumb_ovc-m-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_-ra.svg)}
+.icon_thumb_ovc-ra-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_ra_sn.svg)}
+.icon_thumb_ovc-m-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_-sn.svg)}
+.icon_thumb_ovc-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_ra.svg)}
+.icon_thumb_ovc-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_sn.svg)}
+.icon_thumb_ovc-ts-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_ts_ra.svg)}
+.icon_thumb_skc-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/skc_d.svg)}
+.icon_thumb_skc-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/skc_n.svg)}
+.icon_thumb_wnd{background-image:url(//yastatic.net/weather/i/icons/svg/wnd.svg)}
+.icon_thumb_water{background-image:url(//yastatic.net/weather/i/icons/svg/water.svg)}
+.i-ua_svg_no .icon_thumb_bkn-p-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+ra_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-p-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+ra_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-p-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+sn_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-p-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+sn_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-sn_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_sn_d.png)}
+.i-ua_svg_no .icon_thumb_ovc-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_sn.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-sn_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_sn_n.png)}
+.i-ua_svg_no .icon_thumb_ovc{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc.png)}
+.i-ua_svg_no .icon_thumb_ovc-ts-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_ts_ra.png)}
+.i-ua_svg_no .icon_thumb_bkn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_d.png)}
+.i-ua_svg_no .icon_thumb_ovc-p-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_+ra.png)}
+.i-ua_svg_no .icon_thumb_ovc-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_ra.png)}
+.i-ua_svg_no .icon_thumb_bkn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_n.png)}
+.i-ua_svg_no .icon_thumb_ovc-p-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_+sn.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-ra_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_ra_d.png)}
+.i-ua_svg_no .icon_thumb_ovc-m-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_-ra.png)}
+.i-ua_svg_no .icon_thumb_ovc-ra-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_ra_sn.png)}
+.i-ua_svg_no .icon_thumb_skc-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/skc_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-ra_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_ra_n.png)}
+.i-ua_svg_no .icon_thumb_ovc-m-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_-sn.png)}
+.i-ua_svg_no .icon_thumb_skc-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/skc_n.png)}
+.i-ua_svg_no .icon_thumb_wnd{background-image:url(//yastatic.net/weather/i/icons/48x48/wnd.png)}
+.i-ua_svg_no .icon_thumb_water{background-image:url(//yastatic.net/weather/i/icons/48x48/water.png)}
+
+
+/**/
+.weather-table__wrapper div.weather-table__daypart{ margin-bottom: 5px;  }
+.weather-table__wrapper div.weather-table__temp div{ display: inline-block; font-weight: bold; }

@@ -1,0 +1,44 @@
+.cur_ic_up{
+	background:url("images/ic_up.png");
+	width:7px;
+	height:4px;
+}
+.cur_ic_down{
+	background:url("images/ic_down.png");
+	width:7px;
+	height:4px;
+}
+.cur_cbr_up{
+	background:url("images/cbr_up.png");
+	width:7px;
+	height:8px;
+}
+.cur_cbr_down{
+	background:url("images/cbr_down.png");
+	width:7px;
+	height:8px;
+}
+.cur_up_val{
+	color:#090;
+}
+.cur_down_val{
+	color:#F30;
+}
+#cur_currency_some tr td{
+	padding:5px 9px;
+}
+#cur_currency_some tr:nth-child(even) {
+	background: #FFFFFF;
+}
+#cur_currency_some tr:nth-child(odd) {
+	background: #EFEFEF;
+}
+.cur_block{
+	background: #FFFFFF;
+    margin-bottom: 10px;
+}
+.cur_title_name {
+	color: #333333;
+    text-align: left;
+}
+.cur_on_date{ text-align:center;}

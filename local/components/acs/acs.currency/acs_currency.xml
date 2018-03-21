@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<acs-currency>
+  <creation-date>2018-02-12 14:43:10 GMT-2</creation-date>
+  <host>ya39</host>
+  <ValCurs>
+    <Valute ID="036">
+      <NumCode>036</NumCode>
+      <CharCode>AUD</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Австралийский доллар</Name>
+      <Value>45.2344</Value>
+    </Valute>
+    <Valute ID="944">
+      <NumCode>944</NumCode>
+      <CharCode>AZN</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Азербайджанский манат</Name>
+      <Value>34.1685</Value>
+    </Valute>
+    <Valute ID="826">
+      <NumCode>826</NumCode>
+      <CharCode>GBP</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Фунт стерлингов Соединенного королевства</Name>
+      <Value>81.1555</Value>
+    </Valute>
+    <Valute ID="051">
+      <NumCode>051</NumCode>
+      <CharCode>AMD</CharCode>
+      <Nominal>100</Nominal>
+      <Name>Армянских драмов</Name>
+      <Value>12.0439</Value>
+    </Valute>
+    <Valute ID="933">
+      <NumCode>933</NumCode>
+      <CharCode>BYN</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Белорусский рубль</Name>
+      <Value>29.0786</Value>
+    </Valute>
+    <Valute ID="975">
+      <NumCode>975</NumCode>
+      <CharCode>BGN</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Болгарский лев</Name>
+      <Value>36.4736</Value>
+    </Valute>
+    <Valute ID="986">
+      <NumCode>986</NumCode>
+      <CharCode>BRL</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Бразильский реал</Name>
+      <Value>17.7040</Value>
+    </Valute>
+    <Valute ID="348">
+      <NumCode>348</NumCode>
+      <CharCode>HUF</CharCode>
+      <Nominal>100</Nominal>
+      <Name>Венгерских форинтов</Name>
+      <Value>22.8964</Value>
+    </Valute>
+    <Valute ID="344">
+      <NumCode>344</NumCode>
+      <CharCode>HKD</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Гонконгских долларов</Name>
+      <Value>74.3894</Value>
+    </Valute>
+    <Valute ID="208">
+      <NumCode>208</NumCode>
+      <CharCode>DKK</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Датских крон</Name>
+      <Value>95.8460</Value>
+    </Valute>
+    <Valute ID="840">
+      <NumCode>840</NumCode>
+      <CharCode>USD</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Доллар США</Name>
+      <Value>58.1718</Value>
+    </Valute>
+    <Valute ID="978">
+      <NumCode>978</NumCode>
+      <CharCode>EUR</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Евро</Name>
+      <Value>71.3943</Value>
+    </Valute>
+    <Valute ID="356">
+      <NumCode>356</NumCode>
+      <CharCode>INR</CharCode>
+      <Nominal>100</Nominal>
+      <Name>Индийских рупий</Name>
+      <Value>90.3710</Value>
+    </Valute>
+    <Valute ID="398">
+      <NumCode>398</NumCode>
+      <CharCode>KZT</CharCode>
+      <Nominal>100</Nominal>
+      <Name>Казахстанских тенге</Name>
+      <Value>17.7651</Value>
+    </Valute>
+    <Valute ID="124">
+      <NumCode>124</NumCode>
+      <CharCode>CAD</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Канадский доллар</Name>
+      <Value>46.1461</Value>
+    </Valute>
+    <Valute ID="417">
+      <NumCode>417</NumCode>
+      <CharCode>KGS</CharCode>
+      <Nominal>100</Nominal>
+      <Name>Киргизских сомов</Name>
+      <Value>84.6825</Value>
+    </Valute>
+    <Valute ID="156">
+      <NumCode>156</NumCode>
+      <CharCode>CNY</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Китайских юаней</Name>
+      <Value>92.3245</Value>
+    </Valute>
+    <Valute ID="498">
+      <NumCode>498</NumCode>
+      <CharCode>MDL</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Молдавских леев</Name>
+      <Value>34.8961</Value>
+    </Valute>
+    <Valute ID="578">
+      <NumCode>578</NumCode>
+      <CharCode>NOK</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Норвежских крон</Name>
+      <Value>72.9372</Value>
+    </Valute>
+    <Valute ID="985">
+      <NumCode>985</NumCode>
+      <CharCode>PLN</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Польский злотый</Name>
+      <Value>17.0392</Value>
+    </Valute>
+    <Valute ID="946">
+      <NumCode>946</NumCode>
+      <CharCode>RON</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Румынский лей</Name>
+      <Value>15.3463</Value>
+    </Valute>
+    <Valute ID="960">
+      <NumCode>960</NumCode>
+      <CharCode>XDR</CharCode>
+      <Nominal>1</Nominal>
+      <Name>СДР (специальные права заимствования)</Name>
+      <Value>84.0297</Value>
+    </Valute>
+    <Valute ID="702">
+      <NumCode>702</NumCode>
+      <CharCode>SGD</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Сингапурский доллар</Name>
+      <Value>43.6660</Value>
+    </Valute>
+    <Valute ID="972">
+      <NumCode>972</NumCode>
+      <CharCode>TJS</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Таджикских сомони</Name>
+      <Value>65.9664</Value>
+    </Valute>
+    <Valute ID="949">
+      <NumCode>949</NumCode>
+      <CharCode>TRY</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Турецкая лира</Name>
+      <Value>15.2402</Value>
+    </Valute>
+    <Valute ID="934">
+      <NumCode>934</NumCode>
+      <CharCode>TMT</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Новый туркменский манат</Name>
+      <Value>16.6438</Value>
+    </Valute>
+    <Valute ID="860">
+      <NumCode>860</NumCode>
+      <CharCode>UZS</CharCode>
+      <Nominal>10000</Nominal>
+      <Name>Узбекских сумов</Name>
+      <Value>71.0547</Value>
+    </Valute>
+    <Valute ID="980">
+      <NumCode>980</NumCode>
+      <CharCode>UAH</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Украинских гривен</Name>
+      <Value>21.4775</Value>
+    </Valute>
+    <Valute ID="203">
+      <NumCode>203</NumCode>
+      <CharCode>CZK</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Чешских крон</Name>
+      <Value>28.1649</Value>
+    </Valute>
+    <Valute ID="752">
+      <NumCode>752</NumCode>
+      <CharCode>SEK</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Шведских крон</Name>
+      <Value>71.6640</Value>
+    </Valute>
+    <Valute ID="756">
+      <NumCode>756</NumCode>
+      <CharCode>CHF</CharCode>
+      <Nominal>1</Nominal>
+      <Name>Швейцарский франк</Name>
+      <Value>61.9706</Value>
+    </Valute>
+    <Valute ID="710">
+      <NumCode>710</NumCode>
+      <CharCode>ZAR</CharCode>
+      <Nominal>10</Nominal>
+      <Name>Южноафриканских рэндов</Name>
+      <Value>48.1164</Value>
+    </Valute>
+    <Valute ID="410">
+      <NumCode>410</NumCode>
+      <CharCode>KRW</CharCode>
+      <Nominal>1000</Nominal>
+      <Name>Вон Республики Корея</Name>
+      <Value>53.4353</Value>
+    </Valute>
+    <Valute ID="392">
+      <NumCode>392</NumCode>
+      <CharCode>JPY</CharCode>
+      <Nominal>100</Nominal>
+      <Name>Японских иен</Name>
+      <Value>53.2489</Value>
+    </Valute>
+  </ValCurs>
+</acs-currency>
