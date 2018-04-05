@@ -4,7 +4,7 @@
  * Отладочная функция для вывода информации в необходимом виде
  *
  */
-function p($text, $p, $all) {
+function p($text, $p, $all = Null) {
     global $USER;
     if ($USER->IsAdmin() || $_SERVER["REMOTE_ADDR"] == "85.31.176.156" || $_SERVER["REMOTE_ADDR"] == "128.72.9.44" || $_SERVER["REMOTE_ADDR"] == "95.25.11.115" || $_SERVER["REMOTE_ADDR"] == "37.232.249.89" || $all == "all") {
         echo "<pre>";
