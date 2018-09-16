@@ -1,7 +1,7 @@
 # /local/components/acs/
 # 1. acs.currency
 this is the currency module which parses xml link CBR.RU
-``` $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
+```php $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
 	[
 		"CURR" => [
 			0 => "USD",
@@ -15,10 +15,10 @@ this is the currency module which parses xml link CBR.RU
 ); ```
 # 2. acs.weather
 this is the parsing yandex.ru/pogoda
-``` $APPLICATION->IncludeComponent("acs:acs.weather", ".default", [
+```php $APPLICATION->IncludeComponent("acs:acs.weather", ".default", [
         "OLL_PAGE"=>"/weather",
 ],false); ```
 Forecast for 10 days  /weather/
-``` $APPLICATION->IncludeComponent("acs:acs.weather", "weather", [
+```php $APPLICATION->IncludeComponent("acs:acs.weather", "weather", [
         "OLL_PAGE"=>"/weather",
 ],false); ```
