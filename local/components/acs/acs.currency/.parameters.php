@@ -1,5 +1,4 @@
-<?
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 $arCurr['AUD'] = GetMessage('AUD');
 $arCurr['AZN'] = GetMessage('AZN');
@@ -37,16 +36,7 @@ $arCurr['CHF'] = GetMessage('CHF');
 $arCurr['ZAR'] = GetMessage('ZAR');
 $arCurr['JPY'] = GetMessage('JPY');
 
-$arStyle['ic'] = 'ic';
-$arStyle['cbr'] = 'cbr';
-
-
 $arComponentParameters = array(
-	"GROUPS" => array(
-		"KR_CUR" => array(
-			"NAME" => GetMessage("KR_CUR"),
-		),
-	),
 	"PARAMETERS" => array(
 		"CURR" => array(
 			"PARENT" => "BASE",
@@ -55,59 +45,6 @@ $arComponentParameters = array(
 			"VALUES" => $arCurr,
 			"MULTIPLE" => 'Y'
 		),
-		"STYLE" => array(
-			"PARENT" => "BASE",
-			"NAME" => GetMessage("STYLE"),
-			"TYPE" => "LIST",
-			"VALUES" => $arStyle,
-		),
-		"CACHE_TIME"  =>  Array("DEFAULT"=>36000000),
-		"DIGITS" => array(
-			"PARENT" => "BASE",
-			"NAME" => GetMessage("DIGITS"),
-			"TYPE" => "STRING",
-			"DEFAULT" => 4,
-		),
-		"DELIMITER" => array(
-			"PARENT" => "BASE",
-			"NAME" => GetMessage("DELIMITER"),
-			"TYPE" => "STRING",
-			"DEFAULT" => '.',
-		),
-		"DATE_FORMAT" => array(
-			"PARENT" => "BASE",
-			"NAME" => GetMessage("DATE_FORMAT"),
-			"TYPE" => "STRING",
-			"DEFAULT" => 'd.m.Y',
-		),
-		"COUNT_KR" => Array(
-			"PARENT" => "KR_CUR",
-			"NAME" => GetMessage("COUNT_KR"),
-			"TYPE" => "STRING",
-			"DEFAULT" => "1",
-			"REFRESH" => 'Y',
-		),
+		"CACHE_TIME"  =>  Array("DEFAULT"=>3600),
 	),
 );
-
-if(count(intval($arCurrentValues["COUNT_KR"]))>0):
-	for($i = 0; $i < (intval($arCurrentValues["COUNT_KR"])); $i++):
-	$arComponentParameters["GROUPS"]["KR_CUR_".$i]["NAME"] = (GetMessage("KR_CUR")." ".($i+1));
-		$arComponentParameters["PARAMETERS"]["VAL_".$i."_1"] = array(
-			"PARENT" => "KR_CUR_".$i,
-			"NAME" => GetMessage("VAL_1"),
-			"TYPE" => "LIST",
-			"VALUES" => $arCurr,
-			"DEFAULT" => 'EUR'
-		);
-		$arComponentParameters["PARAMETERS"]["VAL_".$i."_2"] = array(
-			"PARENT" => "KR_CUR_".$i,
-			"NAME" => GetMessage("VAL_2"),
-			"TYPE" => "LIST",
-			"VALUES" => $arCurr,
-			"DEFAULT" => 'USD'
-		);
-	endfor;
-endif;
-
-?>

@@ -10,17 +10,6 @@ class weatherAPI extends \CBitrixComponent
 {
     //
     private $URL_PARSER_PAGE = "https://yandex.ru/pogoda/kaliningrad/details";
-    private $URL_PARSER_ARR = [
-            'moscow'=>'https://yandex.ru/pogoda/moscow/details',
-            'petersburg'=>'https://yandex.ru/pogoda/saint-petersburg/details',
-            'yekaterinburg'=>'https://yandex.ru/pogoda/yekaterinburg/details',
-            'novosibirsk'=>'https://yandex.ru/pogoda/novosibirsk/details',
-            'kaliningrad'=>'https://yandex.ru/pogoda/kaliningrad/details',
-            'krasnoyarsk'=>'https://yandex.ru/pogoda/krasnoyarsk/details',
-            'kazan'=>'https://yandex.ru/pogoda/kazan/details',
-            'ufa'=>'https://yandex.ru/pogoda/ufa/details',
-            'chelyabinsk'=>'https://yandex.ru/pogoda/chelyabinsk/details',
-        ];
 
     public function onPrepareComponentParams($arParams)
     {
@@ -29,7 +18,7 @@ class weatherAPI extends \CBitrixComponent
             "CACHE_TIME" => isset($arParams["CACHE_TIME"])?$arParams["CACHE_TIME"]:3600*6, // six hour
             "CACHE_GROUPS" => isset($arParams["CACHE_GROUPS"])?$arParams["CACHE_GROUPS"]:"N",
             "URL_PARSER_PAGE" => isset($arParams["URL_PARSER_PAGE"])?$arParams["URL_PARSER_PAGE"]:$this->URL_PARSER_PAGE,
-            "OLL_PAGE" => isset($arParams["OLL_PAGE"])?$arParams["OLL_PAGE"]:'/weather',
+            "OLL_PAGE" => isset($arParams["OLL_PAGE"])?$arParams["OLL_PAGE"]:false,
         ];
         return $result;
     }
@@ -40,7 +29,7 @@ class weatherAPI extends \CBitrixComponent
         if (!class_exists("phpQuery")) {
             require_once(dirname(__FILE__) . '/phpQuery/phpQuery.php');
         }
-        $PARAM_PARSER = file_get_contents($this->URL_PARSER_PAGE);
+        $PARAM_PARSER = file_get_contents($this->arParams["URL_PARSER_PAGE"]);
         if($PARAM_PARSER ===  FALSE){
             return FALSE;
         }

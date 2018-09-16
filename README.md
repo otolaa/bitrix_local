@@ -18,13 +18,27 @@ $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
 # 2. acs.weather
 this is the parsing yandex.ru/pogoda
 ```php 
-$APPLICATION->IncludeComponent("acs:acs.weather", ".default", [
-        "OLL_PAGE"=>"/weather",
-],false); 
+$APPLICATION->IncludeComponent("acs:acs.weather", ".default",
+	array(
+		"OLL_PAGE" => "/weather/",
+		"COMPONENT_TEMPLATE" => "weather",
+		"URL_PARSER_PAGE" => "https://yandex.ru/pogoda/kaliningrad/details",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600"
+	),
+	false
+);
 ```
 Forecast for 10 days  /weather/
 ```php 
-$APPLICATION->IncludeComponent("acs:acs.weather", "weather", [
-        "OLL_PAGE"=>"/weather",
-],false); 
+$APPLICATION->IncludeComponent("acs:acs.weather", "weather",
+	array(
+		"OLL_PAGE" => "/weather/",
+		"COMPONENT_TEMPLATE" => "weather",
+		"URL_PARSER_PAGE" => "https://yandex.ru/pogoda/kaliningrad/details",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600"
+	),
+	false
+);
 ```
