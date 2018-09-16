@@ -15,7 +15,7 @@ $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
 	false
 ); 
 ```
-![acs.currency](https://github.com/otolaa/bitrix_local/tree/master/local/templates/.common/img/currency.png "this is the currency module which parses xml link CBR.RU")
+![acs.currency](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/currency.png "this is the currency module which parses xml link CBR.RU")
 # 2. acs.weather
 this is the parsing yandex.ru/pogoda
 ```php 
