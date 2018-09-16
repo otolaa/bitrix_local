@@ -29,7 +29,7 @@ $APPLICATION->IncludeComponent("acs:acs.weather", ".default",
 	false
 );
 ```
-![acs.weather](https://github.com/otolaa/bitrix_local/tree/master/local/templates/.common/img/weather.png "this is the parsing yandex.ru/pogoda")
+![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/weather.png "this is the parsing yandex.ru/pogoda")
 Forecast for 10 days  /weather/
 ```php 
 $APPLICATION->IncludeComponent("acs:acs.weather", "weather",
@@ -42,4 +42,4 @@ $APPLICATION->IncludeComponent("acs:acs.weather", "weather",
 	false
 );
 ```
-![acs.weather](https://github.com/otolaa/bitrix_local/tree/master/local/templates/.common/img/weather10day.png "Forecast for 10 days  /weather/")
+![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/weather10day.png "Forecast for 10 days  /weather/")
