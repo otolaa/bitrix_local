@@ -4,7 +4,7 @@
  * Отладочная функция для вывода информации в необходимом виде
  *
  */
-function p($text, $p, $all = Null) {
+function p($text, $p = Null, $all = Null) {
     global $USER;
     if ($USER->IsAdmin() || $_SERVER["REMOTE_ADDR"] == "85.31.176.156" || $_SERVER["REMOTE_ADDR"] == "128.72.9.44" || $_SERVER["REMOTE_ADDR"] == "95.25.11.115" || $_SERVER["REMOTE_ADDR"] == "37.232.249.89" || $all == "all") {
         echo "<pre>";
@@ -85,7 +85,7 @@ function translit($text){
 /* класс вспомогательный для переменных и т.д. */
 class PRM {
     // PRM::PR($PREVIEW_PICTURE, $arSize = array("width" => 50, "height" => 50)); класс для привью картинки, налету
-    public function PR($PREVIEW_PICTURE, $arSize, $filter=Null){
+    public static function PR($PREVIEW_PICTURE, $arSize, $filter=Null){
         if(CModule::IncludeModule("iblock") && CModule::IncludeModule("main")){
             $arPR = array();
             $arPR = array_merge(array('ID' => $PREVIEW_PICTURE), array_change_key_case(CFile::ResizeImageGet(
@@ -96,6 +96,11 @@ class PRM {
             ),CASE_UPPER));
             return $arPR;
         }
+    }
+    // возвращает протокол на каком сидит сайт
+    public static function isHttps(){
+        $isHttps = !empty($_SERVER['HTTPS']) && 'off' !== strtolower($_SERVER['HTTPS']);
+        return ($isHttps?"https://":"http://");
     }
 }
 

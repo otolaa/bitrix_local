@@ -23,8 +23,8 @@ Class acs extends CModule
             $this->MODULE_VERSION = $arModuleVersion["VERSION"];
             $this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
         }
-        $this->MODULE_NAME = GetMessage("inst_module_name");
-        $this->MODULE_DESCRIPTION = GetMessage("inst_module_desc");
+        $this->MODULE_NAME = GetMessage("acs_module_name");
+        $this->MODULE_DESCRIPTION = GetMessage("acs_module_desc");
     }
 
     /**/
