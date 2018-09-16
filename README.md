@@ -21,7 +21,6 @@ this is the parsing yandex.ru/pogoda
 $APPLICATION->IncludeComponent("acs:acs.weather", ".default",
 	array(
 		"OLL_PAGE" => "/weather/",
-		"COMPONENT_TEMPLATE" => "weather",
 		"URL_PARSER_PAGE" => "https://yandex.ru/pogoda/kaliningrad/details",
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "3600"
@@ -34,7 +33,6 @@ Forecast for 10 days  /weather/
 $APPLICATION->IncludeComponent("acs:acs.weather", "weather",
 	array(
 		"OLL_PAGE" => "/weather/",
-		"COMPONENT_TEMPLATE" => "weather",
 		"URL_PARSER_PAGE" => "https://yandex.ru/pogoda/kaliningrad/details",
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "3600"
