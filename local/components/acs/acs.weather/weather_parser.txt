@@ -1,0 +1,621 @@
+a:3:{s:6:"HEADER";s:31:"Прогноз на 10 дней";s:15:"CURRENT_WEATHER";s:40:"Погода в Калининграде";s:14:"FORECAST_BRIEF";a:10:{i:0;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"16";s:11:"DAY_OF_WEEK";s:32:"сентября, сегодня";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_bkn-d icon_color_dark" aria-hidden="true"></i>";i:2;s:42:"Облачно с прояснениями";i:3;s:3:"764";i:4;s:3:"74%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">4,1</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_bkn-d icon_color_dark" aria-hidden="true"></i>";i:2;s:42:"Облачно с прояснениями";i:3;s:3:"765";i:4;s:3:"63%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">4,7</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:70:"<i class="icon icon_thumb_ovc icon_color_dark" aria-hidden="true"></i>";i:2;s:16:"Пасмурно";i:3;s:3:"764";i:4;s:3:"81%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,2</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:256:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="temp weather-table__temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_bkn-n icon_color_dark" aria-hidden="true"></i>";i:2;s:22:"Малооблачно";i:3;s:3:"764";i:4;s:3:"85%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,1</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:1;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"17";s:11:"DAY_OF_WEEK";s:30:"сентября, завтра";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+19</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_bkn-d icon_color_dark" aria-hidden="true"></i>";i:2;s:42:"Облачно с прояснениями";i:3;s:3:"763";i:4;s:3:"74%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">5,4</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+21</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+22</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"761";i:4;s:3:"56%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">5,9</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+19</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+20</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"761";i:4;s:3:"78%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,1</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_bkn-n icon_color_dark" aria-hidden="true"></i>";i:2;s:22:"Малооблачно";i:3;s:3:"762";i:4;s:3:"90%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">1,5</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:2;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"18";s:11:"DAY_OF_WEEK";s:32:"сентября, вторник";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+21</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_bkn-d icon_color_dark" aria-hidden="true"></i>";i:2;s:42:"Облачно с прояснениями";i:3;s:3:"762";i:4;s:3:"81%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,0</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+22</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+24</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"762";i:4;s:3:"56%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,4</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+22</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+22</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"761";i:4;s:3:"73%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,4</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+19</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"761";i:4;s:3:"84%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,6</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:3;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"19";s:11:"DAY_OF_WEEK";s:28:"сентября, среда";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+22</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"761";i:4;s:3:"82%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,2</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+21</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+24</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"762";i:4;s:3:"68%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,6</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+23</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"763";i:4;s:3:"91%";i:5;s:349:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северо-западный">СЗ</abbr><i class="icon icon_size_12 icon_wind_nw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">1,2</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"763";i:4;s:3:"92%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">1,3</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:4;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"20";s:11:"DAY_OF_WEEK";s:32:"сентября, четверг";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+21</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"763";i:4;s:3:"80%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,5</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+18</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+23</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+24</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"762";i:4;s:3:"64%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,1</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+24</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+18</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"762";i:4;s:3:"81%";i:5;s:345:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-восточный">ЮВ</abbr><i class="icon icon_size_12 icon_wind_se icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">1,0</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:256:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="temp weather-table__temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-n icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"760";i:4;s:3:"88%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,9</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:5;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"21";s:11:"DAY_OF_WEEK";s:32:"сентября, пятница";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+22</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:72:"<i class="icon icon_thumb_skc-d icon_color_dark" aria-hidden="true"></i>";i:2;s:8:"Ясно";i:3;s:3:"758";i:4;s:3:"73%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">4,9</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+23</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+25</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:77:"<i class="icon icon_thumb_bkn-m-ra-d icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"755";i:4;s:3:"54%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">5,6</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+21</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+17</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:73:"<i class="icon icon_thumb_ovc-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:10:"Дождь";i:3;s:3:"756";i:4;s:3:"83%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,5</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"757";i:4;s:3:"87%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,8</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:6;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"22";s:11:"DAY_OF_WEEK";s:32:"сентября, суббота";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"759";i:4;s:3:"81%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">4,0</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"761";i:4;s:3:"77%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">4,7</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"762";i:4;s:3:"88%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">4,1</span></span>
+</div>";i:6;s:138:"<div class="temp">
+<span class="temp__value">+9</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"763";i:4;s:3:"91%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,5</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:7;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"23";s:11:"DAY_OF_WEEK";s:40:"сентября, воскресенье";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:77:"<i class="icon icon_thumb_bkn-m-ra-d icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"764";i:4;s:3:"82%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,4</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"764";i:4;s:3:"74%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: западный">З</abbr><i class="icon icon_size_12 icon_wind_w icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,0</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"763";i:4;s:3:"79%";i:5;s:343:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: юго-западный">ЮЗ</abbr><i class="icon icon_size_12 icon_wind_sw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,1</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:256:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="temp weather-table__temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"762";i:4;s:3:"83%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,4</span></span>
+</div>";i:6;s:138:"<div class="temp">
+<span class="temp__value">+9</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:8;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"24";s:11:"DAY_OF_WEEK";s:40:"сентября, понедельник";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"761";i:4;s:3:"76%";i:5;s:327:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: южный">Ю</abbr><i class="icon icon_size_12 icon_wind_s icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,7</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"761";i:4;s:3:"78%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северный">С</abbr><i class="icon icon_size_12 icon_wind_n icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,1</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+13</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"762";i:4;s:3:"84%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северный">С</abbr><i class="icon icon_size_12 icon_wind_n icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,9</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:256:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="temp weather-table__temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"761";i:4;s:3:"83%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северный">С</abbr><i class="icon icon_size_12 icon_wind_n icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,4</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}i:9;a:3:{s:3:"DAY";a:2:{s:7:"DAY_NUM";s:2:"25";s:11:"DAY_OF_WEEK";s:32:"сентября, вторник";}s:6:"HEADER";a:4:{i:0;s:78:"<div class="weather-table__value">Давление, <br>мм рт. ст.</div>";i:1;s:58:"<div class="weather-table__value">Влажность</div>";i:2;s:57:"<div class="weather-table__value">Ветер, м/с</div>";i:3;s:65:"<div class="weather-table__value">Ощущается как</div>";}s:4:"DATA";a:4:{i:0;a:7:{i:0;s:419:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">утром</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+12</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+14</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"762";i:4;s:3:"83%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северный">С</abbr><i class="icon icon_size_12 icon_wind_n icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">3,6</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:1;a:7:{i:0;s:417:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">днём</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+16</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:70:"<i class="icon icon_thumb_ovc icon_color_dark" aria-hidden="true"></i>";i:2;s:16:"Пасмурно";i:3;s:3:"765";i:4;s:3:"76%";i:5;s:349:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северо-западный">СЗ</abbr><i class="icon icon_size_12 icon_wind_nw icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">2,5</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+15</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:2;a:7:{i:0;s:423:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">вечером</div>
+<div class="weather-table__temp">
+<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>…<div class="temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>
+</div>";i:1;s:70:"<i class="icon icon_thumb_ovc icon_color_dark" aria-hidden="true"></i>";i:2;s:16:"Пасмурно";i:3;s:3:"765";i:4;s:3:"82%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северный">С</abbr><i class="icon icon_size_12 icon_wind_n icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">0,9</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}i:3;a:7:{i:0;s:256:"<div class="weather-table__wrapper">
+<div class="weather-table__daypart">ночью</div>
+<div class="temp weather-table__temp">
+<span class="temp__value">+11</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>
+</div>";i:1;s:75:"<i class="icon icon_thumb_ovc-m-ra icon_color_dark" aria-hidden="true"></i>";i:2;s:29:"Небольшой дождь";i:3;s:3:"759";i:4;s:3:"83%";i:5;s:333:"<div class="weather-table__wrapper">
+<div class="weather-table__wind-direction">
+<abbr class=" icon-abbr" title="Ветер: северный">С</abbr><i class="icon icon_size_12 icon_wind_n icon_wind" aria-hidden="true" data-width="12"></i>
+</div>
+<span class="weather-table__wind"><span class="wind-speed">0,9</span></span>
+</div>";i:6;s:139:"<div class="temp">
+<span class="temp__value">+10</span><span class="temp__unit i-font i-font_face_yandex-sans-text-medium">°</span>
+</div>";}}}}}

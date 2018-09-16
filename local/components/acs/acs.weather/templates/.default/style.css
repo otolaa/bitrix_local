@@ -1,0 +1,101 @@
+/**/
+.weather-controller-modules-table div.temp{ font-size: 14px; font-weight: bold; }
+.weather-controller-modules-table div.weather-table__temp div{ display: inline-block; }
+.weather-controller-modules-table tbody tr td[colspan="3"]{ font-size: small; border: none; background-color: #777 !important; color: #fff; }
+.weather-controller-modules-table tbody tr td:nth-child(6) div.weather-table__wrapper div{ display: inline-block; }
+.weather-controller-modules-table thead tr th:nth-child(1){ max-width: 30px; width: 15% }
+.weather-controller-modules-table thead tr td:nth-child(1){ max-width: 30px; width: 15% }
+.weather-controller-modules-table tbody tr td:nth-child(3){ max-width: 50px; }
+.weather-controller-modules-table tbody tr td:nth-child(3), tbody tr td:nth-child(7){ text-align: center; }
+.weather-block-modules-table .weather-table__daypart{ font-size: 14px;  }
+.weather-block-modules-table .weather-table__temp div{ display: inline-block; font-weight: bold;}
+.weather-url-pages{ text-align: center; }
+/**/
+.icon_size_15 {
+    width: 15px;
+    height: 15px;
+}
+
+.icon_size_48, .icon_color_dark {
+    width: 48px;
+    height: 48px;
+}
+
+.icon_size_30 {
+    width: 30px;
+    height: 30px;
+}
+
+.icon_size_12 {
+    width: 12px;
+    height: 12px;
+}
+
+.icon {
+    display: inline-block;
+    background: 50% no-repeat;
+}
+
+.icon_wind {
+    vertical-align: top;
+    background-image: url(//yastatic.net/weather/i/wind/arrow.svg);
+}
+
+.icon_thumb_water {
+    background-image: url(//yastatic.net/weather/i/icons/svg/water.svg);
+}
+
+.icon_thumb_bkn-p-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+ra_d.svg)}
+.icon_thumb_bkn-p-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+ra_n.svg)}
+.icon_thumb_bkn-p-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+sn_d.svg)}
+.icon_thumb_bkn-p-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_+sn_n.svg)}
+.icon_thumb_bkn-m-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-ra_d.svg)}
+.icon_thumb_bkn-m-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-ra_n.svg)}
+.icon_thumb_bkn-m-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-sn_d.svg)}
+.icon_thumb_bkn-m-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_-sn_n.svg)}
+.icon_thumb_bkn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_d.svg)}
+.icon_thumb_bkn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_n.svg)}
+.icon_thumb_bkn-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_ra_d.svg)}
+.icon_thumb_bkn-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_ra_n.svg)}
+.icon_thumb_bkn-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_sn_d.svg)}
+.icon_thumb_bkn-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/bkn_sn_n.svg)}
+.icon_thumb_ovc{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc.svg)}
+.icon_thumb_ovc-p-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_+ra.svg)}
+.icon_thumb_ovc-p-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_+sn.svg)}
+.icon_thumb_ovc-m-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_-ra.svg)}
+.icon_thumb_ovc-ra-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_ra_sn.svg)}
+.icon_thumb_ovc-m-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_-sn.svg)}
+.icon_thumb_ovc-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_ra.svg)}
+.icon_thumb_ovc-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_sn.svg)}
+.icon_thumb_ovc-ts-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/ovc_ts_ra.svg)}
+.icon_thumb_skc-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/skc_d.svg)}
+.icon_thumb_skc-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/svg/skc_n.svg)}
+.icon_thumb_wnd{background-image:url(//yastatic.net/weather/i/icons/svg/wnd.svg)}
+.icon_thumb_water{background-image:url(//yastatic.net/weather/i/icons/svg/water.svg)}
+.i-ua_svg_no .icon_thumb_bkn-p-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+ra_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-p-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+ra_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-p-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+sn_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-p-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_+sn_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-sn_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-sn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_sn_d.png)}
+.i-ua_svg_no .icon_thumb_ovc-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_sn.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-sn_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-sn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_sn_n.png)}
+.i-ua_svg_no .icon_thumb_ovc{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc.png)}
+.i-ua_svg_no .icon_thumb_ovc-ts-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_ts_ra.png)}
+.i-ua_svg_no .icon_thumb_bkn-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_d.png)}
+.i-ua_svg_no .icon_thumb_ovc-p-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_+ra.png)}
+.i-ua_svg_no .icon_thumb_ovc-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_ra.png)}
+.i-ua_svg_no .icon_thumb_bkn-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_n.png)}
+.i-ua_svg_no .icon_thumb_ovc-p-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_+sn.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-ra_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-ra-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_ra_d.png)}
+.i-ua_svg_no .icon_thumb_ovc-m-ra{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_-ra.png)}
+.i-ua_svg_no .icon_thumb_ovc-ra-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_ra_sn.png)}
+.i-ua_svg_no .icon_thumb_skc-d{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/skc_d.png)}
+.i-ua_svg_no .icon_thumb_bkn-m-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_-ra_n.png)}
+.i-ua_svg_no .icon_thumb_bkn-ra-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/bkn_ra_n.png)}
+.i-ua_svg_no .icon_thumb_ovc-m-sn{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/ovc_-sn.png)}
+.i-ua_svg_no .icon_thumb_skc-n{background-image:url(//yastatic.net/weather/i/icons/blueye/color/48/skc_n.png)}
+.i-ua_svg_no .icon_thumb_wnd{background-image:url(//yastatic.net/weather/i/icons/48x48/wnd.png)}
+.i-ua_svg_no .icon_thumb_water{background-image:url(//yastatic.net/weather/i/icons/48x48/water.png)}
