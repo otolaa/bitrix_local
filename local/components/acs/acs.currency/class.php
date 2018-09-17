@@ -25,7 +25,7 @@ class AcsCurrencyClassAdd extends \CBitrixComponent
     {
         $cbr_xml_ = NULL;
         $date_ = date("d/m/Y", time());
-        $url = "http://www.cbr.ru/scripts/XML_daily.asp?date_req=".$date_."";
+        $url = "http://www.cbr.ru/scripts/XML_daily.asp";
         $xml = simplexml_load_file($url);
         if($xml ===  FALSE){
             // deal with error
