@@ -8,10 +8,11 @@
     //
     $curArr = [];
     if(count($fruit['ITEMS'])):
-    foreach ($fruit['ITEMS'] as $k=>$cur){
+    foreach ($fruit['ITEMS'] as $k=>&$cur){
         if(!in_array($cur[1],$arParams['CURR']))continue;
-        // the difference of course in days, etc.
-        $cur[] = $cur[4] - $second['ITEMS'][$k][4];
+        //
+        $cur[4] = (float)str_replace(",", ".", $cur[4]);
+        $cur[] = round($cur[4] - (float)str_replace(",", ".", $second['ITEMS'][$k][4]),4);
         $curArr[] = $cur;
     }
     endif;
@@ -23,7 +24,7 @@
                 <tr>
                     <td><div class="cur_val_img"><?=$v['1']." / ".$v['3']?></div></td>
                     <td><?=$v['4']?> <?=$v['5']>0?"&#8593;":"&#8595;"?></td>
-                    <td><?=$v['5']>0?"+":""?> <?=$v['5']?></td>
+                    <td><?=$v['5']>0?"+":""?><?=$v['5']?></td>
                 </tr>
             <? endforeach?>
             </tbody></table>

@@ -8,10 +8,11 @@
     //
     $curArr = [];
     if(count($fruit['ITEMS'])):
-        foreach ($fruit['ITEMS'] as $k=>$cur){
+        foreach ($fruit['ITEMS'] as $k=>&$cur){
             if(!in_array($cur[1],['USD','EUR']))continue;
             // the difference of course in days, etc.
-            $cur[] = $cur[4] - $second['ITEMS'][$k][4];
+            $cur[4] = (float)str_replace(",", ".", $cur[4]);
+            $cur[] = round($cur[4] - (float)str_replace(",", ".", $second['ITEMS'][$k][4]),4);
             $curArr[] = $cur;
         }
     endif;
