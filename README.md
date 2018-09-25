@@ -43,3 +43,29 @@ $APPLICATION->IncludeComponent("acs:acs.weather", "weather",
 );
 ```
 ![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/weather10day.png "Forecast for 10 days  /weather/")
+# 3. acs.map
+this is the Yandex Map include component region
+```php
+$APPLICATION->IncludeComponent("acs:acs.map", ".default",
+    [
+        "ITEMS" => [
+            [ 'COORDINATES'=>'55.762996,37.432978',
+                'title'=>'КОНТАКТЫ В МОСКВЕ',
+                'description'=>'г. Москва, Крылатская, 10. <br> По будням: с 07:30 до 21:00 <br> По выходным и праздникам: с 09:00 до 18:00'
+            ],
+            [ 'COORDINATES'=>'54.724271,20.467754',
+                'title'=>'КОНТАКТЫ В КАЛИНИНГРАДЕ',
+                'description'=>'г. Калининград, ул. Каменная 17-2<br> По будням: с 07:30 до 21:00 <br> По выходным и праздникам: с 09:00 до 18:00']
+        ],
+        "CACHE_TYPE"=>"A",
+        "CACHE_TIME"=>3600,
+        "DIV"=>"mapCamp",
+        "PRESET"=>"islands#dotIcon", // style for icon in maps
+        "ICON_COLOR"=>"#64be23", // color icon
+        "HEIGHT"=>350, //px
+        "CLUSTERER"=>'islands#invertedDarkGreenClusterIcons', //
+    ],
+    false
+);
+```
+![acs.map](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/acs_map.jpg "acs.map")
