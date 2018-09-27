@@ -69,3 +69,19 @@ $APPLICATION->IncludeComponent("acs:acs.map", ".default",
 );
 ```
 ![acs.map](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/acs_map.jpg "acs.map")
+
+# 4. acs.kino
+this is the acs.kino parsing kinopoisk.ru/afisha/city/490/
+```php
+$APPLICATION->IncludeComponent("acs:acs.kino", ".default",
+	array(
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => 3600*3, // three hour
+		"URL_CITY_PAGE" => "https://www.kinopoisk.ru/afisha/city/490/",
+		"OLL_PAGE" => "/kino/",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);
+```
+![acs.kino](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/kino.jpg "acs.kino")

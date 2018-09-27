@@ -1,0 +1,20 @@
+/**/
+.kino-component-table{ line-height: normal; }
+.kino-component-table td[colspan="3"], .kino-component-table td[colspan="4"]{
+    font-size: 16px; text-transform: uppercase;
+    border: none;
+    background-color: #777 !important;
+    color: #fff;
+}
+.kino-component-table span.film{ color: #005; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+
+.kino-component-table span.age{ padding: 3px 5px; color: #008f3e; font-weight: bold; }
+.kino-component-table span.cinema{ color: #ff0757; font-size: 16px; }
+.kino-component-table span.hall{ padding: 3px 5px; }
+.kino-component-table small{ padding: 3px 5px; display: block; font-size: 80%; }
+.kino-component-table u{ text-transform: uppercase; text-decoration: none; }
+
+.kino-component-table i, .kino-component-table b, .kino-component-table u{ padding: 3px 5px; display: inline-block; font-size: 18px; font-style: normal; font-weight: normal; text-decoration: none; }
+.kino-component-table i{ color: #aaa; }
+.kino-component-table b{ color: #005; }
+.kino-component-table u{ color: #777; }

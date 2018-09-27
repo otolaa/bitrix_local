@@ -1,0 +1,7 @@
+/**/
+.kino-component-table td[colspan="3"], .kino-component-table td[colspan="4"]{
+    font-size: small;
+    border: none;
+    background-color: #777 !important;
+    color: #fff;
+}
