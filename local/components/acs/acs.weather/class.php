@@ -23,85 +23,91 @@ class weatherAPI extends \CBitrixComponent
         return $result;
     }
 
-    public function acsWeatherParser()
-    {
-        $weatherResult = NULL;
-        if (!class_exists("phpQuery")) {
-            require_once(dirname(__FILE__) . '/phpQuery/phpQuery.php');
-        }
+    // the Parser Xpath Weather
+    public function acsWeatherParserXpath(){
+        //
         $PARAM_PARSER = file_get_contents($this->arParams["URL_PARSER_PAGE"]);
         if($PARAM_PARSER ===  FALSE){
             return FALSE;
         }
-        $doc = \phpQuery::newDocument($PARAM_PARSER);
-        $weatherResult["HEADER"] = $doc->find('h1.title_level_1')->text();
-        $weatherResult["CURRENT_WEATHER"] = $doc->find('h2.title_level_2')->text();
-
-        $weather_body = $doc->find('div.forecast-details');
-        $details__day = pq($weather_body)->find('dt.forecast-details__day');
-        $details__day_info = pq($weather_body)->find('dd.forecast-details__day-info');
-
-        $weatherResult['WEEK10'] = array();
-        foreach($details__day as $i=>$el){
-            $q = pq($el);
-            $DAY_NUM = trim($q->find('strong.forecast-details__day-number')->text());
-            $DAY_OF_WEEK = $q->find('span.forecast-details__day-month')->text() . ", " . $q->find('span.forecast-details__day-name')->text();
-            if(strlen($DAY_NUM)>0 && strlen($DAY_OF_WEEK)>0) {
-                $weatherResult['WEEK10']['DAY'][] = array(
-                    "DAY_NUM" => $DAY_NUM,
-                    "DAY_OF_WEEK" => $DAY_OF_WEEK,
-                );
-            }
-        }
-
-        foreach($details__day_info as $a=>$el){
-            $q = pq($el);
-            $weather_table_head_ = $q->find('thead.weather-table__head th.weather-table__head-cell');
-            $HEADER_ = array();
-            foreach ($weather_table_head_ as $wea) {
-                $weaHtml = trim(pq($wea)->html());
-                if (strlen($weaHtml) > 0) {
-                    $HEADER_[] = $weaHtml;
-                }
-            }
-            if(count($HEADER_)) {
-                $weatherResult['WEEK10']['HEADER'][] = $HEADER_;
-            }
-
-            //
-            $dops = array();
-            $weather_table_row_ = $q->find('tbody.weather-table__body tr.weather-table__row');
-            if(count($weather_table_row_)) {
-                foreach ($weather_table_row_ as $d=>$row) {
-                    $rowHtml = pq($row)->find('td.weather-table__body-cell');
-                    foreach($rowHtml as $ds=>$rh){
-                        $dops[$d][$ds] = pq($rh)->html();
-                    }
-                }
-            }
-            if(count($dops)) {
-                $weatherResult['WEEK10']['DATA'][] = $dops;
-            }
-        }
-
-        // FORECAST_BRIEF
-        foreach($weatherResult['WEEK10']['DATA'] as $d_=>$dt){
-            $weatherResult['FORECAST_BRIEF'][$d_]['DAY'] =  $weatherResult['WEEK10']['DAY'][$d_];
-            $weatherResult['FORECAST_BRIEF'][$d_]['HEADER'] =  $weatherResult['WEEK10']['HEADER'][$d_];
-            $weatherResult['FORECAST_BRIEF'][$d_]['DATA'] = $dt;
-        }
-
-        unset($weatherResult['WEEK10']);
+        $weatherResult = []; //
+        $doc = new DOMDocument();
+        $doc->loadHTML($PARAM_PARSER); // from html
+        $xpath = new DOMXpath($doc);
+        // заголовок
+        $h1 = $xpath->query('//div[@class="location-title"]/h1[@class="title title_level_1"]')->item(0)->textContent;
+        $h2 = $xpath->query('//div[@class="location-title"]/h2[@class="title title_level_2 location-title__place"]')->item(0)->textContent;
         //
+        $weatherResult["HEADER"] = $h1;
+        $weatherResult["HEADER_CURRENT"] = $h2;
+        //
+        $daysArr = []; // массив дней и т.д.
+        $dyl = $xpath->query('//div[@class="content"]/div/dt');
+        foreach ($dyl as $dy){
+            //
+            $dn = $xpath->query('strong[@class="forecast-details__day-number"]',$dy)->item(0)->textContent;
+            $dm = $xpath->query('small/span[@class="forecast-details__day-month"]',$dy)->item(0)->textContent;
+            $dnm = $xpath->query('small/span[@class="forecast-details__day-name"]',$dy)->item(0)->textContent;
+            $daysArr[] = $dn." ".$dm.", ".$dnm;
+        }
+        //
+        $thArr = [];
+        $th = $xpath->query('//div[@class="content"]/div/dd/table[@class="weather-table"]/thead')->item(0);
+        foreach ($xpath->query('th/div',$th) as $thd){
+            $thArr[] = $thd->textContent;
+        }
+        $weatherResult["HEADER_TABLE"] = $thArr;
+        //
+        $wArr = [];
+        $wl = $xpath->query('//div[@class="content"]/div/dd/table[@class="weather-table"]/tbody[@class="weather-table__body"]');
+        foreach ($wl as $kw=>$w){
+            $wArrDay = [];
+            foreach ($xpath->query('tr',$w) as $tr){
+                $wDayItem = [];
+                $rd = $xpath->query('td',$tr);
+                $rd0 = $xpath->query('div/div',$rd->item(0))->item(0)->textContent;
+                $rd1 = $xpath->query('div/div',$rd->item(0))->item(1)->textContent;
+                $wDayItem[] = [$rd0,$rd1];
+                //
+                $rdc = $xpath->query('i',$rd->item(1))->item(0)->getAttribute('class');
+                $wDayItem[] = $rdc;
+                //
+                $rd2 = $rd->item(2)->textContent;
+                $wDayItem[] = $rd2;
+                $rd3 = $rd->item(3)->textContent;
+                $wDayItem[] = $rd3;
+                $rd4 = $rd->item(4)->textContent;
+                $wDayItem[] = $rd4;
+                //
+                //
+                $rd5 = [];
+                if($ss = $xpath->query('div/span/span',$rd->item(5))->item(0)->textContent){
+                    $rd5[] = $ss;
+                }
+                if($ss = $xpath->query('div/div/abbr',$rd->item(5))->item(0)->getAttribute('title')){
+                    $rd5[] = $ss;
+                }
+                $wDayItem[] = count($rd5)? $rd5:$rd->item(5)->textContent;
+                //
+                $rd6 = $rd->item(6)->textContent;
+                $wDayItem[] = $rd6;
+                //
+                $wArrDay[] = $wDayItem;
+            }
+            //
+            $wArr[$kw]['DAY'] = $daysArr[$kw];
+            $wArr[$kw]['ITEMS'] = $wArrDay;
+        }
+        $weatherResult["WEEK_TABLE"] = $wArr;
         return $weatherResult;
     }
 
     public function executeComponent()
     {
         global $USER;
-        if ($this->StartResultCache(false, array(($this->arParams["CACHE_GROUPS"] === "N" ? false : $USER->GetGroups()), $this->arParams, date("d/m/Y")), 'weather_parser')){
+        if ($this->StartResultCache(false, array(($this->arParams["CACHE_GROUPS"] === "N" ? false : $USER->GetGroups()), $this->arParams, date("d.m.Y")), 'weather_parser')){
             //
-            $weather_now_date = $this->acsWeatherParser();
+            $weather_now_date = $this->acsWeatherParserXpath();
             if($weather_now_date){
                 $this->arResult["WEATHER"] = $weather_now_date;
                 // write everything to a file txt
