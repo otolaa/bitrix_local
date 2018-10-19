@@ -6,8 +6,8 @@
 .weather-controller-modules-table tbody tr td:nth-child(6) div.weather-table__wrapper div{ display: inline-block; }
 .weather-controller-modules-table thead tr th:nth-child(1){ max-width: 30px; width: 15% }
 .weather-controller-modules-table thead tr td:nth-child(1){ max-width: 30px; width: 15% }
-.weather-controller-modules-table tbody tr td:nth-child(3){ max-width: 50px; }
-.weather-controller-modules-table tbody tr td:nth-child(3), tbody tr td:nth-child(7){ text-align: center; }
+.weather-controller-modules-table tbody tr td:nth-child(3){ /*max-width: 50px;*/ }
+.weather-controller-modules-table tbody tr td:nth-child(3), .weather-controller-modules-table tbody tr td:nth-child(4), tbody tr td:nth-child(7){ text-align: center; }
 .weather-block-modules-table .weather-table__daypart{ font-size: 14px;  }
 .weather-block-modules-table .weather-table__temp div{ display: inline-block; font-weight: bold;}
 .weather-url-pages{ text-align: center; }
