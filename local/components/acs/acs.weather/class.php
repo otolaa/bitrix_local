@@ -81,11 +81,17 @@ class weatherAPI extends \CBitrixComponent
                 //
                 //
                 $rd5 = [];
-                if($ss = $xpath->query('div/span/span',$rd->item(5))->item(0)->textContent){
-                    $rd5[] = $ss;
+                $span = @$xpath->query('div/span/span',$rd->item(5))->item(0);
+                if($span===Null){ /**/ }else {
+                    if ($ss = $span->textContent) {
+                        $rd5[] = $ss;
+                    }
                 }
-                if($ss = $xpath->query('div/div/abbr',$rd->item(5))->item(0)->getAttribute('title')){
-                    $rd5[] = $ss;
+                $abbr = @$xpath->query('div/div/abbr',$rd->item(5))->item(0);
+                if($abbr===Null){ /**/ }else {
+                    if ($ss = $abbr->getAttribute('title')) {
+                        $rd5[] = $ss;
+                    }
                 }
                 $wDayItem[] = count($rd5)? $rd5:$rd->item(5)->textContent;
                 //
