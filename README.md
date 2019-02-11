@@ -15,7 +15,7 @@ $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
 	false
 ); 
 ```
-![acs.currency](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/currency.png "this is the currency module which parses xml link CBR.RU")
+![acs.currency](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/currency.png "this is the currency module which parses xml link CBR.RU")
 # 2. acs.weather
 this is the parsing yandex.ru/pogoda
 ```php 
@@ -29,7 +29,7 @@ $APPLICATION->IncludeComponent("acs:acs.weather", ".default",
 	false
 );
 ```
-![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/weather.png "this is the parsing yandex.ru/pogoda")
+![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/weather.png "this is the parsing yandex.ru/pogoda")
 Forecast for 10 days  /weather/
 ```php 
 $APPLICATION->IncludeComponent("acs:acs.weather", "weather",
@@ -42,7 +42,7 @@ $APPLICATION->IncludeComponent("acs:acs.weather", "weather",
 	false
 );
 ```
-![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/weather10day.png "Forecast for 10 days  /weather/")
+![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/weather10day.png "Forecast for 10 days  /weather/")
 # 3. acs.map
 this is the Yandex Map include component region
 ```php
@@ -68,7 +68,7 @@ $APPLICATION->IncludeComponent("acs:acs.map", ".default",
     false
 );
 ```
-![acs.map](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/acs_map.jpg "acs.map")
+![acs.map](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/acs_map.jpg "acs.map")
 
 # 4. acs.kino
 this is the acs.kino parsing kinopoisk.ru/afisha/city/490/
@@ -84,4 +84,4 @@ $APPLICATION->IncludeComponent("acs:acs.kino", ".default",
 	false
 );
 ```
-![acs.kino](https://github.com/otolaa/bitrix_local/blob/master/local/templates/.common/img/kino.jpg "acs.kino")
+![acs.kino](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/kino.jpg "acs.kino")
