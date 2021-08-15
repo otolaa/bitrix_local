@@ -67,7 +67,7 @@ $APPLICATION->IncludeComponent("acs:acs.map", ".default",
 ![acs.map](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/acs_map.jpg "acs.map")
 
 ## 4. acs.kino
-this is the acs.kino parsing kinopoisk.ru/afisha/city/490/
+this is the acs.kino parsing kinopoisk.ru/afisha/city/490/ the /index_bk_kino.php
 ```php
 $APPLICATION->IncludeComponent("acs:acs.kino", ".default",
 	array(
