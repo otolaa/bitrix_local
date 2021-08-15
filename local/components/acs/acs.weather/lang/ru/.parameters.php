@@ -1,5 +1,5 @@
 <?
 $MESS['SITY'] = 'Показывать параметр города';
-$MESS['URL_PARSER_PAGE'] = 'Город';
-$MESS['OLL_PAGE'] = 'Страница 10-ть дней прогноза';
+$MESS['CITY_ID'] = 'Город ID';
+$MESS['KEY'] = 'Нужен ключь openweathermap.org';
 ?>

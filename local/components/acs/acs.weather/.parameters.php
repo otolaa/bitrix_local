@@ -1,35 +1,28 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
-/* тут необходимо первоначальные параметры, задающие параметры текущего города */
-$URL_PARSER_ARR = [
-    'moscow'=>'https://yandex.ru/pogoda/moscow/details',
-    'petersburg'=>'https://yandex.ru/pogoda/saint-petersburg/details',
-    'yekaterinburg'=>'https://yandex.ru/pogoda/yekaterinburg/details',
-    'novosibirsk'=>'https://yandex.ru/pogoda/novosibirsk/details',
-    'kaliningrad'=>'https://yandex.ru/pogoda/kaliningrad/details',
-    'krasnoyarsk'=>'https://yandex.ru/pogoda/krasnoyarsk/details',
-    'kazan'=>'https://yandex.ru/pogoda/kazan/details',
-    'ufa'=>'https://yandex.ru/pogoda/ufa/details',
-    'chelyabinsk'=>'https://yandex.ru/pogoda/chelyabinsk/details',
-    'samara'=>'https://yandex.ru/pogoda/samara/details',
-    'omsk'=>'https://yandex.ru/pogoda/omsk/details',
-    'rostov-na-donu'=>'https://yandex.ru/pogoda/rostov-na-donu/details',
+/* initial parameters that specify the parameters of the current city  */
+$CITY_ID = [
+    'Moscow'=>'524894',
+    'Saint Petersburg'=>'536203',
+    'Yekaterinburg'=>'1486209',
+    'Novosibirsk'=>'1496747',
+    'Kaliningrad'=>'554234',
 ];
 
 $arComponentParameters = array(
     "PARAMETERS" => array(
-        "URL_PARSER_PAGE" => array(
+        "CITY_ID" => array(
             "PARENT" => "BASE",
-            "NAME" => GetMessage("URL_PARSER_PAGE"),
+            "NAME" => GetMessage("CITY_ID"),
             "TYPE" => "LIST",
-            "VALUES" => array_flip($URL_PARSER_ARR),
+            "VALUES" => array_flip($CITY_ID),
             "MULTIPLE" => 'N'
         ),
-        "OLL_PAGE" => array(
+        "KEY" => array(
             "PARENT" => "BASE",
-            "NAME" => GetMessage("OLL_PAGE"),
+            "NAME" => GetMessage("KEY"),
             "TYPE" => "STRING",
-            "DEFAULT" => "/weather/",
+            "DEFAULT" => "",
         ),
         "CACHE_TIME"  =>  Array("DEFAULT"=>3600),
     ),

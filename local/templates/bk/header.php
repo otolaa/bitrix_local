@@ -1,141 +1,116 @@
 <? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+// D7
+use Bitrix\Main\Page\Asset;
+use Bitrix\Main\Localization\Loc;
+use Bitrix\Main\Config\Option;
+
 /* lang files */
-IncludeTemplateLangFile(__FILE__);
+Loc::loadMessages(__FILE__);
+
 global $USER, $APPLICATION;
-/* MOBILES */
-include $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/lib/mobile_detect/NLSResponsive.php';
-/* CSS Script can then be removed */
-$styles = array("styles", "template_styles");
-require_once $_SERVER["DOCUMENT_ROOT"] . "/local/php_interface/lib/less.php/Less.php";
-$options = array('compress'=>true);
-foreach($styles as $filename){
-    $parser = new Less_Parser($options);
-    $parser->parseFile($_SERVER["DOCUMENT_ROOT"] . '/local/templates/bk/css/'.$filename.'.less', '/local/templates/bk/css/');
-    $css = $parser->getCss();
-    file_put_contents($_SERVER["DOCUMENT_ROOT"] . '/local/templates/bk/css/'.$filename.'.css', $css);
-} ?>
+$curPage = $APPLICATION->GetCurPage(true); /* path the pages from templates styles */
+$needSidebar = (defined("HIDE_SIDEBAR") && HIDE_SIDEBAR == true || preg_match("~^".SITE_DIR."(courses|catalog)/~", $curPage) ? true : false); ?>
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<?=LANGUAGE_ID?>">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?$APPLICATION->ShowHead();?>
-    <? /* подключаем библиотеки (( */ ?>
-    <? CJSCore::Init(array('ajax', 'window')); ?>
-    <? /* from meta VK && Facebook */ ?>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?=$APPLICATION->ShowTitle("title",true)?>" />
-    <meta property="og:url" content="http://<?=$_SERVER['SERVER_NAME']?><?=$APPLICATION->GetCurPageParam("", Array("clear_cache","bitrix_include_areas"))?>" />
-    <meta property="og:site_name" content="<?$arSite=$APPLICATION->GetSiteByDir();echo $arSite["NAME"]?>" />
-    <? /* Title */ ?>
+    <? /* from meta VK && Facebook && yandex - called through deferred functions
+    Asset::getInstance()->addString('<meta name="yandex-verification" content="" />', true);
+    Asset::getInstance()->addString('<meta property="og:type" content="website" />', true);
+    Asset::getInstance()->addString('<meta property="og:title" content="" />', true);
+    Asset::getInstance()->addString('<meta property="og:url" content="" />', true);
+    Asset::getInstance()->addString('<meta property="og:site_name" content="" />', true);
+     */ ?>
     <title><?$APPLICATION->ShowTitle()?></title>
 
-    <? /* Bootstrap */
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/bootstrap-3/css/bootstrap.min.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/js/datepicker/css/bootstrap-datepicker.min.css');
-    /* STYLE */
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/styles.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/template_styles.css');
-    //
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/font-awesome-4.7.0/css/font-awesome.min.css');
-    //$APPLICATION->SetAdditionalCSS('/local/templates/.common/js/fancybox-master/dist/jquery.fancybox.min.css'); ?>
+    <? /* Bootstrap && font-awesome && fonts.googleapis */
+    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
+    Asset::getInstance()->addCss('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    Asset::getInstance()->addCss('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    /* STYLE */
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/style.css');
+
+    /* <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> */
+    Asset::getInstance()->addString('<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <![endif]-->');
 
-    <? /* jQuery (necessary for Bootstrap's JavaScript plugins) */
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery-1.12.4/jquery-1.12.4.min.js');
-    /* Include all compiled plugins (below), or include individual files as needed */
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/bootstrap-3/js/bootstrap.js');
+    /* jQuery && bootstrap && script.min */
+    Asset::getInstance()->addJs('https://code.jquery.com/jquery-3.5.1.min.js');
+    Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js');
+    Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js');
     /* ALL JAVASCRIPT */
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.nicescroll.340/jquery.nicescroll.min.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/datepicker/js/bootstrap-datepicker.min.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/datepicker/locales/bootstrap-datepicker.ru.min.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/my.js');
-    ?>
-    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/favicon/favicon.ico" />
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/script.min.js'); ?>
+    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico" />
 </head>
 
-<body role="document">
+<body>
 <? /* FROM ADMIN */ ?>
 <?$APPLICATION->ShowPanel();?>
-<? /* MENU */ ?>
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("include/company_name.php"), Array(), Array("MODE"=>"html"));?>
-        </div>
-        <div class="navbar-collapse collapse">
-            <?$APPLICATION->IncludeComponent("bitrix:menu", "bootstrap_horizontal_multilevel",
-                Array(
-                    "ROOT_MENU_TYPE" => "top",
-                    "MAX_LEVEL" => "2",
-                    "CHILD_MENU_TYPE" => "left",
-                    "USE_EXT" => "Y",
-                    "MENU_CACHE_TYPE" => "A",
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "MENU_CACHE_GET_VARS" => Array()
-                )
-            );?>
-        </div><!--/.nav-collapse -->
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("include/company_name.php"), [], ["MODE"=>"html"]);?>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <?$APPLICATION->IncludeComponent("bitrix:menu", "bootstrap_horizontal_multilevel",
+            [
+                "ROOT_MENU_TYPE" => "top",
+                "MAX_LEVEL" => "2",
+                "CHILD_MENU_TYPE" => "left",
+                "USE_EXT" => "Y",
+                "MENU_CACHE_TYPE" => "A",
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_CACHE_GET_VARS" => []
+            ]
+        );?>
+        <form class="form-inline my-2 my-lg-0" action="/search/" method="get">
+            <div class="input-group">
+                <input class="form-control" name="q" type="text" placeholder="Поиск" aria-label="Search">
+                <div class="input-group-append"><button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></div>
+            </div>
+        </form>
     </div>
-</div>
+</nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <? /* Main include */ ?>
-    <?$APPLICATION->IncludeComponent("bitrix:main.include", "",
-        Array(
-            "AREA_FILE_SHOW" => "sect",
-            "AREA_FILE_SUFFIX" => "top",
-            "AREA_FILE_RECURSIVE" => "Y",
-            "EDIT_MODE" => "html",
-            "EDIT_TEMPLATE" => "sect_inc.php"
-        )
-    );?>
-    <?$APPLICATION->IncludeComponent("bitrix:main.include", "",
-        Array(
-            "AREA_FILE_SHOW" => "page",
-            "AREA_FILE_SUFFIX" => "top",
-            "AREA_FILE_RECURSIVE" => "Y",
-            "EDIT_MODE" => "html",
-            "EDIT_TEMPLATE" => "page_inc.php"
-        )
-    );?>
-</div>
+<main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+            [
+                "AREA_FILE_SHOW" => "sect", "AREA_FILE_SUFFIX" => "top",
+                "AREA_FILE_RECURSIVE" => "Y", "EDIT_MODE" => "php", "EDIT_TEMPLATE" => "sect_inc.php"
+            ]
+        );
+        $APPLICATION->IncludeComponent("bitrix:main.include", "",
+            [
+                "AREA_FILE_SHOW" => "page", "AREA_FILE_SUFFIX" => "top",
+                "AREA_FILE_RECURSIVE" => "Y", "EDIT_MODE" => "php", "EDIT_TEMPLATE" => "page_inc.php"
+            ]
+        );?>
+    </div>
 
-<? /* three columns && + */ ?>
-<div class="container theme-showcase" data-detected="<?=(NLSResponsive::$mobile_device ? "mobile_detect_mobile" : (NLSResponsive::$tablet_device ? "mobile_detect_tablet" : "mobile_detect_desktop"))?>">
-
-
-
-    <div class="row">
-        <main class="<?$APPLICATION->AddBufferContent('setMainClass')?>" role="main">
-
-            <div id="navigation">
-                <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default",
-                    Array(
-                        "START_FROM" => "0",
-                        "PATH" => "",
-                        "SITE_ID" => ""
-                    )
-                );?>
-            </div>
-
-            <div class="page-header">
-                <h1 id="pagetitle"><?$APPLICATION->ShowTitle(false)?></h1>
-            </div>
+    <div class="container <?$APPLICATION->AddBufferContent('mainClass')?>">
+        <div class="row">
+            <div class="col-12 col-sm-12 <?=(!$needSidebar?'col-md-12 col-lg-8 col-xl-8':'')?>">
+                <div id="navigation">
+                    <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default",
+                        [
+                            "START_FROM" => "0",
+                            "PATH" => "",
+                            "SITE_ID" => ""
+                        ]
+                    );?>
+                </div>
+                <div class="page-header">
+                    <h1 id="pagetitle"><?$APPLICATION->ShowTitle(false)?></h1>
+                </div>

@@ -1,4 +1,4 @@
 <?if(!check_bitrix_sessid()) return;?>
 <?
-echo CAdminMessage::ShowNote("Модуль успешно удален из системы");
+echo CAdminMessage::ShowNote("Вспомогательный модуль успешно удален из системы");
 ?>

@@ -51,7 +51,7 @@ Class acs extends CModule
         //RegisterModuleDependences("iblock","OnBeforeIBlockElementUpdate",$this->MODULE_ID,"cMainRPJ","onBeforeElementUpdateHandler");
         RegisterModule($this->MODULE_ID);
         $this->InstallFiles();
-        $APPLICATION->IncludeAdminFile("Установка модуля ".$this->MODULE_ID, $DOCUMENT_ROOT."/bitrix/modules/".$this->MODULE_ID."/install/step.php");
+        $APPLICATION->IncludeAdminFile("Установка модуля ".$this->MODULE_ID, $DOCUMENT_ROOT."/local/modules/".$this->MODULE_ID."/install/step.php");
         return true;
     }
 
@@ -61,7 +61,7 @@ Class acs extends CModule
        // UnRegisterModuleDependences("iblock","OnBeforeIBlockElementUpdate",$this->MODULE_ID,"cMainRPJ","onBeforeElementUpdateHandler");
         UnRegisterModule($this->MODULE_ID);
         $this->UnInstallFiles();
-        $APPLICATION->IncludeAdminFile("Деинсталляция модуля ".$this->MODULE_ID, $DOCUMENT_ROOT."/bitrix/modules/".$this->MODULE_ID."/install/unstep.php");
+        $APPLICATION->IncludeAdminFile("Деинсталляция модуля ".$this->MODULE_ID, $DOCUMENT_ROOT."/local/modules/".$this->MODULE_ID."/install/unstep.php");
         return true;
     }
 }

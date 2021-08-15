@@ -8,131 +8,110 @@ Loc::loadMessages(__FILE__);
 
 class weatherAPI extends \CBitrixComponent
 {
-    //
-    private $URL_PARSER_PAGE = "https://yandex.ru/pogoda/kaliningrad/details";
+    private $API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
     public function onPrepareComponentParams($arParams)
     {
         $result = [
             "CACHE_TYPE" => isset($arParams["CACHE_TYPE"])?$arParams["CACHE_TYPE"]:"A",
-            "CACHE_TIME" => isset($arParams["CACHE_TIME"])?$arParams["CACHE_TIME"]:3600*6, // six hour
+            "CACHE_TIME" => isset($arParams["CACHE_TIME"])?$arParams["CACHE_TIME"]:3600*2, // 2 hour
             "CACHE_GROUPS" => isset($arParams["CACHE_GROUPS"])?$arParams["CACHE_GROUPS"]:"N",
-            "URL_PARSER_PAGE" => isset($arParams["URL_PARSER_PAGE"])?$arParams["URL_PARSER_PAGE"]:$this->URL_PARSER_PAGE,
-            "OLL_PAGE" => isset($arParams["OLL_PAGE"])?$arParams["OLL_PAGE"]:false,
+            "CITY_ID" => isset($arParams["CITY_ID"])?$arParams["CITY_ID"]:524894,
+            "KEY" => isset($arParams["KEY"])?$arParams["KEY"]:"",
         ];
         return $result;
     }
 
-    // the Parser Xpath Weather
-    public function acsWeatherParserXpath(){
-        //
-        $PARAM_PARSER = file_get_contents($this->arParams["URL_PARSER_PAGE"]);
-        if($PARAM_PARSER ===  FALSE){
-            return FALSE;
+    public function sendToAPI($url_api_method = '', $params = '', $method = 'GET')
+    {
+        $headers = ["Accept: application/json", "Cache-Control: no-cache", "Content-Type: application/x-www-form-urlencoded"];
+        $get_params = '';
+        if ($method == 'GET' && strlen($params)) $get_params = '?'.$params;
+        $ch = curl_init($this->API_URL.$url_api_method.$get_params);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        if ($params) {
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
         }
-        $weatherResult = []; //
-        $doc = new DOMDocument();
-        $doc->loadHTML($PARAM_PARSER); // from html
-        $xpath = new DOMXpath($doc);
-        // заголовок
-        $h1 = $xpath->query('//div[@class="location-title"]/h1[@class="title title_level_1"]')->item(0)->textContent;
-        $h2 = $xpath->query('//div[@class="location-title"]/h2[@class="title title_level_2 location-title__place"]')->item(0)->textContent;
-        //
-        $weatherResult["HEADER"] = $h1;
-        $weatherResult["HEADER_CURRENT"] = $h2;
-        //
-        $daysArr = []; // массив дней и т.д.
-        $dyl = $xpath->query('//div[@class="content"]/div/dt');
-        foreach ($dyl as $dy){
-            //
-            $dn = $xpath->query('strong[@class="forecast-details__day-number"]',$dy)->item(0)->textContent;
-            $dm = $xpath->query('small/span[@class="forecast-details__day-month"]',$dy)->item(0)->textContent;
-            $dnm = $xpath->query('small/span[@class="forecast-details__day-name"]',$dy)->item(0)->textContent;
-            $daysArr[] = $dn." ".$dm.", ".$dnm;
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        $code=curl_getinfo($ch,CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        $response = json_decode($response, true);
+
+        if($code!=200 && $code!=204 && $code!=201) {
+            return false;
+        } else {
+            return $response;
         }
-        //
-        $thArr = [];
-        $th = $xpath->query('//div[@class="content"]/div/dd/table[@class="weather-table"]/thead')->item(0);
-        foreach ($xpath->query('th/div',$th) as $thd){
-            $thArr[] = $thd->textContent;
-        }
-        $weatherResult["HEADER_TABLE"] = $thArr;
-        //
-        $wArr = [];
-        $wl = $xpath->query('//div[@class="content"]/div/dd/table[@class="weather-table"]/tbody[@class="weather-table__body"]');
-        foreach ($wl as $kw=>$w){
-            $wArrDay = [];
-            foreach ($xpath->query('tr',$w) as $tr){
-                $wDayItem = [];
-                $rd = $xpath->query('td',$tr);
-                $rd0 = $xpath->query('div/div',$rd->item(0))->item(0)->textContent;
-                $rd1 = $xpath->query('div/div',$rd->item(0))->item(1)->textContent;
-                $wDayItem[] = [$rd0,$rd1];
-                //
-                $rdc = $xpath->query('img',$rd->item(1))->item(0)->getAttribute('class');
-                $wDayItem[] = $rdc;
-                //
-                $rd2 = $rd->item(2)->textContent;
-                $wDayItem[] = $rd2;
-                $rd3 = $rd->item(3)->textContent;
-                $wDayItem[] = $rd3;
-                $rd4 = $rd->item(4)->textContent;
-                $wDayItem[] = $rd4;
-                //
-                //
-                $rd5 = [];
-                $span = @$xpath->query('div/span/span',$rd->item(5))->item(0);
-                if($span===Null){ /**/ }else{
-                    if ($ss = $span->textContent) {
-                        $rd5[] = $ss;
-                    }
-                }
-                $abbr = @$xpath->query('div/div/abbr',$rd->item(5))->item(0);
-                if($abbr===Null){ /**/ }else{
-                    if ($ss = $abbr->getAttribute('title')) {
-                        $rd5[] = $ss;
-                    }
-                }
-                $wDayItem[] = count($rd5)? $rd5:$rd->item(5)->textContent;
-                //
-                $rd6 = $rd->item(6)->textContent;
-                $wDayItem[] = $rd6;
-                //
-                $wArrDay[] = $wDayItem;
-            }
-            //
-            $wArr[$kw]['DAY'] = $daysArr[$kw];
-            $wArr[$kw]['ITEMS'] = $wArrDay;
-        }
-        $weatherResult["WEEK_TABLE"] = $wArr;
-        return $weatherResult;
+    }
+
+    public function getEmoji($s)
+    {
+        $emoji = [
+                "Clear"=> "Ясно &#155662;",
+                "Clouds"=> "Облачно &#9729;",
+                "Rain"=> "Дождь &#9748;",
+                "Drizzle"=> "Дождь &#9748;",
+                "Thunderstorm"=> "Гроза &#9889;",
+                "Snow"=> "Снег &#127784;",
+                "Mist"=> "Туман &#127787;"
+        ];
+
+        return ($emoji[$s]?$emoji[$s]:'Посмотри в окно, не пойму что там за погода!');
+    }
+
+    public function getPrint($r)
+    {
+        if ($r && is_array($r)) {
+
+            return Loc::getMessage('GET_PRINT_WEATHER', [
+                '#_date_#'=>date('d.m.Y H:i'),
+                '#city_w#'=>$r['name'],
+                '#temp_w#'=>$r['main']['temp'],
+                '#wd#'=>$this->getEmoji($r["weather"][0]["main"]),
+                '#humidity_w#'=>$r["main"]["humidity"],
+                '#pressure_w#'=>$r['main']['pressure'],
+                '#wind_w#'=>$r['wind']['speed'],
+                '#sunrise_time#'=>date('d.m.Y H:i', $r['sys']['sunrise']),
+                '#sunset_time#'=>date('d.m.Y H:i', $r['sys']['sunset']),
+            ]);
+
+        } else return false;
     }
 
     public function executeComponent()
     {
         global $USER;
-        if ($this->StartResultCache(false, array(($this->arParams["CACHE_GROUPS"] === "N" ? false : $USER->GetGroups()), $this->arParams, date("d.m.Y")), 'weather_parser')){
-            //
-            $weather_now_date = $this->acsWeatherParserXpath();
-            if($weather_now_date){
+        if ($this->StartResultCache(false, [($this->arParams["CACHE_GROUPS"] === "N" ? false : $USER->GetGroups()), $this->arParams]))
+        {
+            // "https://api.openweathermap.org/data/2.5/weather?id={id}&appid={key}&units=metric&lang=ru"
+            $params = 'id='.$this->arParams["CITY_ID"].'&appid='.$this->arParams["KEY"].'&units=metric&lang=ru';
+            $weather_now_date = $this->sendToAPI('', $params);
+            if ($weather_now_date) {
                 $this->arResult["WEATHER"] = $weather_now_date;
+                $this->arResult["WEATHER_PRINT"] = $this->getPrint($weather_now_date);
                 // write everything to a file txt
-                file_put_contents(dirname(__FILE__)."/weather_parser.txt", serialize($weather_now_date));
-                $this->arResult['WEATHER_URL_CACHE'] = true;
-            }else{
+                // file_put_contents(dirname(__FILE__)."/weather_parser.txt", serialize($weather_now_date));
+                // $this->arResult['WEATHER_URL_CACHE'] = true;
+            } else {
                 // we deliver from a file
-                $this->arResult["WEATHER"] = unserialize(file_get_contents(dirname(__FILE__)."/weather_parser.txt"));
+                $this->arResult["WEATHER"] = []; // unserialize(file_get_contents(dirname(__FILE__)."/weather_parser.txt"));
+                $this->arResult["WEATHER_PRINT"] = '';
                 $this->arResult['WEATHER_URL_CACHE'] = false;
             }
+
             // If parsing is successful then we cache the data
-            if($this->arResult['WEATHER_URL_CACHE']){
+            if ($this->arResult['WEATHER_URL_CACHE']) {
                 $this->SetResultCacheKeys([
                     "WEATHER",
+                    "WEATHER_PRINT",
                 ]);
-            }else{
+            } else {
                 // data is not cached
                 $this->AbortResultCache();
             }
+
             $this->includeComponentTemplate();
         }
     }

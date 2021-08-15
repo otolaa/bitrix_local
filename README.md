@@ -1,5 +1,14 @@
+# I ❤ Bootstrap 4.6
+### Theme Template ❤ Bootstrap for Bitrix
+```php
+/index_bk.php
+/index_bk_right.php
+/index_bk_top.php
+/index_bk_kino.php
+```
+![index_bk](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/bk.png "index_bk.php")
 # /local/components/acs/
-# 1. acs.currency
+## 1. acs.currency
 this is the currency module which parses xml link CBR.RU
 ```php 
 $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
@@ -16,34 +25,21 @@ $APPLICATION->IncludeComponent("acs:acs.currency", ".default",
 ); 
 ```
 ![acs.currency](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/currency.png "this is the currency module which parses xml link CBR.RU")
-# 2. acs.weather
-this is the parsing yandex.ru/pogoda
+## 2. acs.weather
+this is the api.openweathermap.org
 ```php 
 $APPLICATION->IncludeComponent("acs:acs.weather", ".default",
-	array(
-		"OLL_PAGE" => "/weather/",
-		"URL_PARSER_PAGE" => "https://yandex.ru/pogoda/kaliningrad/details",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "3600"
-	),
-	false
+    array(
+        "KEY" => "", // key from is openweathermap.org
+        "CITY_ID" => "536203",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600"
+    ),
+    false
 );
 ```
-![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/weather.png "this is the parsing yandex.ru/pogoda")
-Forecast for 10 days  /weather/
-```php 
-$APPLICATION->IncludeComponent("acs:acs.weather", "weather",
-	array(
-		"OLL_PAGE" => "/weather/",
-		"URL_PARSER_PAGE" => "https://yandex.ru/pogoda/kaliningrad/details",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "3600"
-	),
-	false
-);
-```
-![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/weather10day.png "Forecast for 10 days  /weather/")
-# 3. acs.map
+![acs.weather](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/weather.png "this is the api.openweathermap.org")
+## 3. acs.map
 this is the Yandex Map include component region
 ```php
 $APPLICATION->IncludeComponent("acs:acs.map", ".default",
@@ -70,7 +66,7 @@ $APPLICATION->IncludeComponent("acs:acs.map", ".default",
 ```
 ![acs.map](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/acs_map.jpg "acs.map")
 
-# 4. acs.kino
+## 4. acs.kino
 this is the acs.kino parsing kinopoisk.ru/afisha/city/490/
 ```php
 $APPLICATION->IncludeComponent("acs:acs.kino", ".default",

@@ -1,10 +1,9 @@
 <?php
-//CModule::IncludeModule("acs");
+IncludeModuleLangFile(__FILE__);
 static $MODULE_ID = 'acs';
 //
 $arClasses=array(
-    'AcsApi'=>'classes/general/acs.php',
-    'HiWrapper'=>'classes/general/HiWrapper.php',
+    'AcsApi'=>'classes/general/AcsApi.php',
 );
 
-CModule::AddAutoloadClasses("acs",$arClasses);
+CModule::AddAutoloadClasses("acs", $arClasses);

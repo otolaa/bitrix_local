@@ -1,2 +1,4 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<a class="navbar-brand" href="/" title="Книги и авторы"><i class="glyphicon glyphicon-list-alt"></i>  Книги и авторы</a>
+<a class="navbar-brand" href="/" title="Bootstrap 4.6">
+    <i class="fa fa-heart"></i> Bootstrap 4.6
+</a>

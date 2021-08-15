@@ -1,0 +1,140 @@
+/* CSS font */
+@charset "UTF-8";
+@import "var.scss";
+
+/* CSS fonts */
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&subset=cyrillic');
+// http://fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic
+
+html{ position: relative; min-height: 100%; }
+html, body { font-family: $ad-font-family; font-size:16px; }
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+  background-color:$background-color-small;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main[role='main'] {
+  flex: 1;
+  padding-bottom: 0px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: $black-color !important; color: $font-color; font-family: $ad-font-family-bold; font-weight: 700; text-transform: uppercase;
+}
+
+footer > .container {
+  padding-top: 20px;
+}
+
+/* URL */
+a{ color:$href-color; text-decoration:none;}
+a:hover,a:focus{ color:$href-color-hover; text-decoration: underline; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+  font-family: $ad-font-family-bold; font-weight: 700;
+}
+
+.bg-dark{  background-color: $black-color !important;
+  &.navbar-dark {
+    .navbar-toggler {
+      padding: .35rem .55rem; border-radius: 1px; border-color: rgba(255,255,255,.8); color: rgba(255,255,255,.8);
+      text-shadow: none;
+      & > i{ width: 20px; height: 20px; }
+      &[aria-expanded=false] {
+        .fa-bars::before{ content: "\f0c9"; }
+      }
+      &[aria-expanded=true] {
+        .fa-bars::before{ content: "\f00d"; }
+      }
+    }
+  }
+}
+
+.navbar-dark {
+  .navbar-nav .nav-link { color: $font-color; font-weight: 700; font-family: $ad-font-family-narrow; font-size: 1.125rem; }
+  .navbar-brand {
+    text-transform: uppercase;
+    font-family: $ad-font-family-bold;
+    font-weight: 700;
+  }
+}
+
+.breadcrumb{ border-radius: 0px; font-family: $ad-font-family-narrow; }
+
+/* jumbotron && btn */
+.jumbotron{
+  background: linear-gradient(165deg, #e9ecef 50%, $background-color-small 50%);
+  .btn{ text-transform: uppercase; }
+  .display-4{ font-size: 2rem; }
+  p.tiser-text{  font-size: 1.125rem; }
+}
+
+/**/
+body::-webkit-scrollbar {  width: 1em; }
+body::-webkit-scrollbar-track {
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+  background-color: #e1e1e1;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+
+label.cbLabel{ padding-left: 0px; }
+label.cbLabel > input[type=checkbox]{ display: none; }
+label.cbLabel > span{
+  background: $background-color-small;
+  border: solid 1px $background-color-small;
+  display:inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: .3rem;
+  vertical-align:middle;
+  margin-right: 7px;
+  box-shadow: inset 0px 3px 10px rgba(0,0,0,0.2);
+  position: relative;
+}
+label.cbLabel > input[type=checkbox]:checked + span{
+  color: #000 !important;
+  background: $background-color-small;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 2px 0px 0px 4px;
+}
+label.cbLabel > input[type=checkbox]:checked + span:before{
+  content: "\f00c"; position: absolute; top: -2px; left: 2px; text-shadow:none;
+} 
+
+
+
+/**/
+.modal-content{ border-radius: 0px;
+  .modal-header{ border: none; text-transform: uppercase; font-size: 1.375rem;
+    .close{ text-shadow: none; }
+  }
+  .modal-body{ border: none; font-size: 1.25rem; }
+  .modal-footer{ border: none; }
+}
+
+/**/
+@import "media.scss";   
+
+/**/
+.btn{ font-weight: 700; font-family: $ad-font-family-bold; }
+button, input, textarea{
+  &:active, &:hover, &:focus{ outline: 0 !important;
+    outline-color: transparent!important;
+    outline-width: 0!important;
+    outline-style: none!important;
+    box-shadow: 0 0 0 0 rgba(0,123,255,0) !important; }
+} 

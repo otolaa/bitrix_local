@@ -1,3 +1,2 @@
 <?
-//$MESS ['subscr_prolog_title'] = "Модуль";
-?>
+$MESS ['ACS_P'] = "";

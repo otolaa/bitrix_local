@@ -8,6 +8,14 @@ Loc::loadMessages(__FILE__);
 
 class AcsCurrencyClassAdd extends \CBitrixComponent
 {
+    private $API_URL;
+
+    public function __construct(CBitrixComponent $component = null)
+    {
+        $this->API_URL = "http://www.cbr.ru/scripts/XML_daily.asp";
+        parent::__construct($component);
+    }
+
     public function onPrepareComponentParams($arParams)
     {
         $result = [
@@ -20,13 +28,33 @@ class AcsCurrencyClassAdd extends \CBitrixComponent
         return $result;
     }
 
-    //
+    public function sendToAPI($api_method = '', $params = '', $method = 'GET')
+    {
+        $headers = ["Accept: text/html,application/xhtml+xml,application/xml", "Cache-Control: no-cache", "Content-Type: application/x-www-form-urlencoded"];
+        $get_params = '';
+        if ($method == 'GET' && $params) $get_params = '?'.$params;
+        $ch = curl_init($this->API_URL.$api_method.$get_params);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        if ($params) {
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+        }
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        $code=curl_getinfo($ch,CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($code!=200 && $code!=204 && $code!=201) {
+            return false;
+        } else {
+            return $response;
+        }
+    }
+
     public function getCurrencyDay()
     {
         $cbr_xml_ = NULL;
-        $date_ = date("d/m/Y", time());
-        $url = "http://www.cbr.ru/scripts/XML_daily.asp";
-        $xml = simplexml_load_file($url);
+        $xml = simplexml_load_string($this->sendToAPI());
         if($xml ===  FALSE){
             // deal with error
             return FALSE;
@@ -51,7 +79,7 @@ class AcsCurrencyClassAdd extends \CBitrixComponent
         {
             $this->arResult["DATE"] = date("d.m.Y");
             $currency_now_date = $this->getCurrencyDay();
-            if($currency_now_date){
+            if ($currency_now_date) {
                 //
                 $reportArr = unserialize(file_get_contents(dirname(__FILE__)."/cbr_parser.txt"));
                 $reportArr = $reportArr?$reportArr:[];
@@ -61,23 +89,25 @@ class AcsCurrencyClassAdd extends \CBitrixComponent
                 // write everything to a file txt
                 file_put_contents(dirname(__FILE__)."/cbr_parser.txt", serialize($reportArr));
                 $this->arResult['CBR_URL_CACHE'] = true;
-            }else{
+            } else {
                 // we deliver from a file
                 $this->arResult["CBR"] = unserialize(file_get_contents(dirname(__FILE__)."/cbr_parser.txt"));
                 $this->arResult['CBR_URL_CACHE'] = false;
             }
             // If parsing is successful then we cache the data
-            if($this->arResult['CBR_URL_CACHE']){
+            if ($this->arResult['CBR_URL_CACHE']) {
                 $this->SetResultCacheKeys([
                     "CBR",
                     "DATE",
                 ]);
-            }else{
+            } else {
                 // data is not cached
                 $this->AbortResultCache();
             }
+
             $this->includeComponentTemplate();
         }
+
         return $this->arResult["DATE"];
     }
 }

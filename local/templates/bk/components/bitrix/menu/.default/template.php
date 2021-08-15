@@ -2,10 +2,9 @@
 
 <?if (!empty($arResult)):?>
     <div class="list-group">
-
 <?
 foreach($arResult as $arItem):
-	if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1) 
+	if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1)
 		continue;
 ?>
 	<?if($arItem["SELECTED"]):?>
@@ -13,8 +12,6 @@ foreach($arResult as $arItem):
 	<?else:?>
 		<a href="<?=$arItem["LINK"]?>" class="list-group-item"><?=$arItem["TEXT"]?></a>
 	<?endif?>
-	
 <?endforeach?>
-
 </div>
 <?endif?>
