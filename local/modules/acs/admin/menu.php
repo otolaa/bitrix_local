@@ -13,8 +13,8 @@ if($APPLICATION->GetGroupRight("acs")>"D"){
         "module_id" => "acs",
         "text" => 'Вспомогательный модуль',
         "title"=> 'Вспомогательный модуль для дополнительного функционала',
-        "icon" => "sys_menu_icon",   // sys_menu_icon  bizproc_menu_icon
-        "page_icon" => "sys_menu_icon", // sys_menu_icon  bizproc_menu_icon
+        "icon" => "util_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
+        "page_icon" => "util_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
         "items_id" => "menu_acs",
         "items" => array(
             array(
