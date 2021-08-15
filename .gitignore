@@ -1,0 +1,25 @@
+# Ignore IDE
+.idea
+.vscode
+# Ignore everything:
+/*
+!README.md
+!.gitignore
+!.gitattributes
+!index_bk.php
+!index_bk_right.php
+!index_bk_top.php
+!index_bk_kino.php
+# first enable then exclude
+!/local/
+/local/*
+!/local/php_interface/
+!/local/templates/
+# Except for the components directories: /local/components/acs/
+!/local/components/
+/local/components/*
+!/local/components/acs/
+# Except for the modules directories: /local/modules/acs/
+!/local/modules/
+/local/modules/*
+!/local/modules/acs/
