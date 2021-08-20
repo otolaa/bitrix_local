@@ -22,7 +22,7 @@
     </div>
     <div class="col-12">
         <div class="alert alert-secondary" role="alert">
-            <i class="fa fa-info-circle"></i> Иконки используется <a href="https://fontawesome.bootstrapcheatsheets.com/" target="_blank" rel="nofollow">font-awesome/4.7.0</a>
+            <i class="fa fa-info-circle"></i> Иконки используется <a href="https://fontawesome.bootstrapcheatsheets.com/" class="alert-link" target="_blank" rel="nofollow">font-awesome/4.7.0</a>
         </div>
     </div>
 
@@ -40,5 +40,15 @@
             ); ?>
         </div>
     </div>
+
+    <div class="col-12">
+        <div class="alert alert-secondary fade show" role="alert">
+            <?=\Bitrix\Main\Config\Option::get("acs", "SITE_COOKIE", '')?>
+            <button type="button" class="btn btn-secondary btn-sm btn-block mt-2" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">принять</span>
+            </button>
+        </div>
+    </div>
+
 </div>
 

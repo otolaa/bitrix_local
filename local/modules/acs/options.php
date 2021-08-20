@@ -8,23 +8,24 @@ if($RIGHT >= "R") :
 
 //
 $arAllOptions = Array(
-    array("OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", array("text",50), ""),
-    array("SITE_POLITICS", "Политика конфединцальности", array("textarea",5,50), 'Этот сайт защищен reCAPTCHA и применяются <a href="https://policies.google.com/privacy" rel="nofollow">Политика конфиденциальности</a> и <a href="https://policies.google.com/terms" rel="nofollow">Условия обслуживания</a> Google.'),
+    array("SITE_POLITICS", "Политика сайта", array("textarea",5,50), 'Этот сайт защищен reCAPTCHA и применяются <a href="https://policies.google.com/privacy" rel="nofollow">Политика конфиденциальности</a> и <a href="https://policies.google.com/terms" rel="nofollow">Условия обслуживания</a> Google.'),
     array("SITE_ERROR", "Сообщение об ошибке", array("textarea",2,50), 'Вопрос не отправлен, так как система определила Вас как робота. Задайте вопрос по телефону, указанному в контактах.'),
-    // array("ERROR_SCORE", "Сообщение об недоступности", array("textarea",2,50), 'Проверка завершилась с ошибкой, попробуйте еще раз.'),
+    array("SITE_COOKIE", "Сообщение про куки", array("textarea",2,50), 'Мы используем &#127850;cookie, чтобы сделать сайт максимально удобным для вас.'),
     array("ADD_LOG", "Записывать лог", array("checkbox",10), ""),
     array('PHP_CURLOPT_PROXY', 'CURL PROXY для API', array('text',50), ''),
+    array("OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", array("text",50), ""),
 );
 
 $aTabs = array(
     array("DIV" => "edit1", "TAB" => GetMessage("MAIN_TAB_SET"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_SET")),
-    array("DIV" => "edit3", "TAB" => GetMessage("MAIN_TAB_RIGHTS"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS")),
+    array("DIV" => "edit2", "TAB" => GetMessage("MAIN_TAB_RIGHTS"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS")),
 );
+
 $tabControl = new CAdminTabControl("tabControl", $aTabs);
 
 CModule::IncludeModule($module_id);
 
-if($REQUEST_METHOD=="POST" && strlen($Update.$Apply.$RestoreDefaults) > 0 && $RIGHT=="W" && check_bitrix_sessid())
+if($_SERVER["REQUEST_METHOD"] == "POST" && strlen($Update.$Apply.$RestoreDefaults) > 0 && $RIGHT=="W" && check_bitrix_sessid())
 {
     require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/perfmon/prolog.php");
 
@@ -41,29 +42,23 @@ if($REQUEST_METHOD=="POST" && strlen($Update.$Apply.$RestoreDefaults) > 0 && $RI
         }
     }
 
-    ob_start();
     $Update = $Update.$Apply;
+    ob_start();
     require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/admin/group_rights.php");
     ob_end_clean();
-}
 
-?>
+    LocalRedirect($APPLICATION->GetCurPage()."?mid=".urlencode($module_id)."&lang=".urlencode(LANGUAGE_ID)."&".$tabControl->ActiveTabParam());
+} ?>
+
 <form method="post" action="<?echo $APPLICATION->GetCurPage()?>?mid=<?=urlencode($module_id)?>&amp;lang=<?=LANGUAGE_ID?>">
     <?
     $tabControl->Begin();
     $tabControl->BeginNextTab();
-    $arNotes = array();
     foreach($arAllOptions as $f=>$arOption):
         $val = COption::GetOptionString($module_id, $arOption[0], $arOption[3]);
-        $type = $arOption[2];
-        if(isset($arOption[4]))
-            $arNotes[] = $arOption[4];
-        ?>
+        $type = $arOption[2]; ?>
         <tr>
             <td width="40%" nowrap <?if($type[0]=="textarea") echo 'class="adm-detail-valign-top"'?>>
-                <?if(isset($arOption[4])):?>
-                    <span class="required"><sup><?echo count($arNotes)?></sup></span>
-                <?endif;?>
                 <label for="<?echo htmlspecialcharsbx($arOption[0])?>"><?echo $arOption[1]?>:</label>
             <td width="60%">
                 <?if($type[0]=="checkbox"):?>
@@ -89,17 +84,6 @@ if($REQUEST_METHOD=="POST" && strlen($Update.$Apply.$RestoreDefaults) > 0 && $RI
     <?=bitrix_sessid_post();?>
     <?$tabControl->End();?>
 </form>
-<?
-if(!empty($arNotes))
-{
-    echo BeginNote();
-    foreach($arNotes as $i => $str)
-    {
-        ?><span class="required"><sup><?echo $i+1?></sup></span><?echo $str?><br><?
-    }
-    echo EndNote();
-}
-?>
 <?endif;?>
 
 <? // информационная подсказка, про статусы и т.д.

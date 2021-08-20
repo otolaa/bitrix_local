@@ -49,7 +49,7 @@ class weatherAPI extends \CBitrixComponent
     public function getEmoji($s)
     {
         $emoji = [
-                "Clear"=> "Ясно &#155662;",
+                "Clear"=> "Ясно &#9728;",
                 "Clouds"=> "Облачно &#9729;",
                 "Rain"=> "Дождь &#9748;",
                 "Drizzle"=> "Дождь &#9748;",
