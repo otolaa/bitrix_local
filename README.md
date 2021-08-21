@@ -5,6 +5,7 @@
 /index_bk_right.php
 /index_bk_top.php
 /index_bk_kino.php
+/local/templates/bk/*
 ```
 ![index_bk](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/bk.png "index_bk.php")
 # /local/components/acs/
@@ -81,3 +82,11 @@ $APPLICATION->IncludeComponent("acs:acs.kino", ".default",
 );
 ```
 ![acs.kino](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/kino.jpg "acs.kino")
+
+## 5. /local/modules/acs/
+this is small module for message in user
+```php
+\Bitrix\Main\Config\Option::get("acs", "SITE_COOKIE", '');
+\Bitrix\Main\Config\Option::get("acs", "OPENWEATHERMAP_KEY", ''), // key from is openweathermap.org
+```
+![message in user](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/hm.jpg "message in user")

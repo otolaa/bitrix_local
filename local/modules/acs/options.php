@@ -7,19 +7,19 @@ $RIGHT = $APPLICATION->GetGroupRight($module_id);
 if($RIGHT >= "R") :
 
 //
-$arAllOptions = Array(
-    array("SITE_POLITICS", "Политика сайта", array("textarea",5,50), 'Этот сайт защищен reCAPTCHA и применяются <a href="https://policies.google.com/privacy" rel="nofollow">Политика конфиденциальности</a> и <a href="https://policies.google.com/terms" rel="nofollow">Условия обслуживания</a> Google.'),
-    array("SITE_ERROR", "Сообщение об ошибке", array("textarea",2,50), 'Вопрос не отправлен, так как система определила Вас как робота. Задайте вопрос по телефону, указанному в контактах.'),
-    array("SITE_COOKIE", "Сообщение про куки", array("textarea",2,50), 'Мы используем &#127850;cookie, чтобы сделать сайт максимально удобным для вас.'),
-    array("ADD_LOG", "Записывать лог", array("checkbox",10), ""),
-    array('PHP_CURLOPT_PROXY', 'CURL PROXY для API', array('text',50), ''),
-    array("OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", array("text",50), ""),
-);
+$arAllOptions = [
+    ["SITE_POLITICS", "Политика сайта", ["textarea",5,50], 'Этот сайт защищен reCAPTCHA и применяются <a href="https://policies.google.com/privacy" rel="nofollow">Политика конфиденциальности</a> и <a href="https://policies.google.com/terms" rel="nofollow">Условия обслуживания</a> Google.'],
+    ["SITE_ERROR", "Сообщение об ошибке", ["textarea",2,50], 'Вопрос не отправлен, так как система определила Вас как робота. Задайте вопрос по телефону, указанному в контактах.'],
+    ["SITE_COOKIE", "Сообщение про куки", ["textarea",2,50], 'Мы используем &#127850;cookie, чтобы сделать сайт максимально удобным для вас.'],
+    ["ADD_LOG", "Записывать лог", ["checkbox",10], ""],
+    ['PHP_CURLOPT_PROXY', 'CURL PROXY для API', ['text',50], ''],
+    ["OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", ["text",50], ""],
+];
 
-$aTabs = array(
-    array("DIV" => "edit1", "TAB" => GetMessage("MAIN_TAB_SET"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_SET")),
-    array("DIV" => "edit2", "TAB" => GetMessage("MAIN_TAB_RIGHTS"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS")),
-);
+$aTabs = [
+    ["DIV" => "edit1", "TAB" => GetMessage("MAIN_TAB_SET"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_SET")],
+    ["DIV" => "edit2", "TAB" => GetMessage("MAIN_TAB_RIGHTS"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS")],
+];
 
 $tabControl = new CAdminTabControl("tabControl", $aTabs);
 

@@ -41,6 +41,7 @@
         </div>
     </div>
 
+    <? if (Bitrix\Main\Loader::includeModule("acs")) : ?>
     <div class="col-12">
         <div class="alert alert-secondary fade show" role="alert">
             <?=\Bitrix\Main\Config\Option::get("acs", "SITE_COOKIE", '')?>
@@ -49,6 +50,7 @@
             </button>
         </div>
     </div>
+    <? endif; ?>
 
 </div>
 
