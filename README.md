@@ -89,4 +89,4 @@ this is small module for message in user
 \Bitrix\Main\Config\Option::get("acs", "SITE_COOKIE", '');
 \Bitrix\Main\Config\Option::get("acs", "OPENWEATHERMAP_KEY", ''), // key from is openweathermap.org
 ```
-![message in user](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/hm.jpg "message in user")
+![message in user](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/hm.png "message in user")
