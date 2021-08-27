@@ -1,17 +1,20 @@
 <?php
+namespace Bitrix\acs;
 
 /**
  * Class AcsApi
+ * @package Bitrix\acs
  */
-
-class AcsApi{
+class AcsApi
+{
 
     static $MODULE_ID = "acs";
 
     /* Debug function for displaying information in the required form */
-    static function p($text, $p = Null, $all = Null) {
+    public static function p($text, $p = Null, $all = Null) {
         global $USER;
-        if ($USER->IsAdmin() || $all == "all") {
+        if ($USER->IsAdmin() || $all == "all")
+        {
             echo "<pre>";
             if($p == "p") {
                 print_r($text);

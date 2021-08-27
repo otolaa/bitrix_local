@@ -29,17 +29,15 @@ class weatherAPI extends \CBitrixComponent
         if ($method == 'GET' && strlen($params)) $get_params = '?'.$params;
         $ch = curl_init($this->API_URL.$url_api_method.$get_params);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        if ($params) {
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-        }
+        if ($params && $method == 'POST') curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($ch);
-        $code=curl_getinfo($ch,CURLINFO_HTTP_CODE);
+        $code = curl_getinfo($ch,CURLINFO_HTTP_CODE);
         curl_close($ch);
         $response = json_decode($response, true);
 
-        if($code!=200 && $code!=204 && $code!=201) {
+        if ($code!=200 && $code!=204 && $code!=201) {
             return false;
         } else {
             return $response;
@@ -63,7 +61,7 @@ class weatherAPI extends \CBitrixComponent
 
     public function getPrint($r)
     {
-        if ($r && is_array($r)) {
+        if (is_array($r) && count($r)) {
 
             return Loc::getMessage('GET_PRINT_WEATHER', [
                 '#_date_#'=>date('d.m.Y H:i'),

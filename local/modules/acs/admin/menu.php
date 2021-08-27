@@ -1,9 +1,13 @@
 <?php
-IncludeModuleLangFile(__FILE__);
+
+use \Bitrix\Main\Localization\Loc;
+use \Bitrix\Main\Loader;
+
+loc::loadMessages(__FILE__);
 
 if ($APPLICATION->GetGroupRight("acs") > "D") {
 
-    require_once($_SERVER["DOCUMENT_ROOT"]."/local/modules/acs/prolog.php");
+    require_once(Loader::getLocal('modules/acs/prolog.php'));
 
     // the types menu  dev.1c-bitrix.ru/api_help/main/general/admin.section/menu.php
     $aMenu = [
@@ -13,8 +17,8 @@ if ($APPLICATION->GetGroupRight("acs") > "D") {
         "module_id" => "acs",
         "text" => 'Вспомогательный модуль',
         "title"=> 'Вспомогательный модуль для дополнительного функционала',
-        "icon" => "util_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
-        "page_icon" => "util_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
+        "icon" => "fileman_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
+        "page_icon" => "fileman_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
         "items_id" => "menu_acs",
         "items" => [
             [

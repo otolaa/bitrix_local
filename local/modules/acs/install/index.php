@@ -1,6 +1,9 @@
-<?
+<?php
 
-IncludeModuleLangFile(__FILE__);
+use \Bitrix\Main\Localization\Loc;
+use \Bitrix\Main\Loader;
+
+loc::loadMessages(__FILE__);
 
 Class acs extends CModule
 {
@@ -13,7 +16,7 @@ Class acs extends CModule
 
     function acs()
     {
-        $arModuleVersion = array();
+        $arModuleVersion = [];
 
         $path = str_replace("\\", "/", __FILE__);
         $path = substr($path, 0, strlen($path) - strlen("/index.php"));
@@ -27,17 +30,20 @@ Class acs extends CModule
         $this->MODULE_DESCRIPTION = GetMessage("acs_module_desc");
     }
 
-    /**/
-
-    function InstallFiles($arParams = array())
+    function getPageLocal($page)
     {
-        CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/acs/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
+        return str_replace('index.php', $page, Loader::getLocal('modules/'.$this->MODULE_ID.'/install/index.php'));
+    }
+
+    function InstallFiles($arParams = [])
+    {
+        CopyDirFiles($this->getPageLocal('admin'), $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
         return true;
     }
 
     function UnInstallFiles()
     {
-        DeleteDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/acs/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
+        DeleteDirFiles($this->getPageLocal('admin'), $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
         return true;
     }
 
@@ -48,20 +54,20 @@ Class acs extends CModule
     {
         global $DOCUMENT_ROOT, $APPLICATION;
         // Install events
-        //RegisterModuleDependences("iblock","OnBeforeIBlockElementUpdate",$this->MODULE_ID,"cMainRPJ","onBeforeElementUpdateHandler");
+        // RegisterModuleDependences("iblock","OnBeforeIBlockElementUpdate",$this->MODULE_ID,"cMainRPJ","onBeforeElementUpdateHandler");
         RegisterModule($this->MODULE_ID);
         $this->InstallFiles();
-        $APPLICATION->IncludeAdminFile("Установка модуля ".$this->MODULE_ID, $DOCUMENT_ROOT."/local/modules/".$this->MODULE_ID."/install/step.php");
+        $APPLICATION->IncludeAdminFile("Установка модуля ".$this->MODULE_ID, $this->getPageLocal('step.php'));
         return true;
     }
 
     function DoUninstall()
     {
         global $DOCUMENT_ROOT, $APPLICATION;
-       // UnRegisterModuleDependences("iblock","OnBeforeIBlockElementUpdate",$this->MODULE_ID,"cMainRPJ","onBeforeElementUpdateHandler");
+        // UnRegisterModuleDependences("iblock","OnBeforeIBlockElementUpdate",$this->MODULE_ID,"cMainRPJ","onBeforeElementUpdateHandler");
         UnRegisterModule($this->MODULE_ID);
         $this->UnInstallFiles();
-        $APPLICATION->IncludeAdminFile("Деинсталляция модуля ".$this->MODULE_ID, $DOCUMENT_ROOT."/local/modules/".$this->MODULE_ID."/install/unstep.php");
+        $APPLICATION->IncludeAdminFile("Деинсталляция модуля ".$this->MODULE_ID, $this->getPageLocal('unstep.php'));
         return true;
     }
 }
