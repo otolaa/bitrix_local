@@ -31,7 +31,7 @@
         <div class="alert alert-secondary" role="alert">
             <? $APPLICATION->IncludeComponent("acs:acs.weather", ".default",
                 array(
-                    "KEY" => \Bitrix\Main\Config\Option::get("acs", "OPENWEATHERMAP_KEY", ''), // key from is openweathermap.org
+                    "KEY" => \Bitrix\Main\Config\Option::get("local.utility", "OPENWEATHERMAP_KEY", ''), // key from is openweathermap.org
                     "CITY_ID" => "536203",
                     "CACHE_TYPE" => "A",
                     "CACHE_TIME" => "3600"

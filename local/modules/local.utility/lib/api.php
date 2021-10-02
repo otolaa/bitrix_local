@@ -1,14 +1,14 @@
 <?php
-namespace Bitrix\acs;
+namespace Local\Utility;
 
 /**
- * Class AcsApi
- * @package Bitrix\acs
+ * Class Api
+ * @package Local\Utility
  */
-class AcsApi
+class Api
 {
 
-    static $MODULE_ID = "acs";
+    static $MODULE_ID = "local.utility";
 
     /* Debug function for displaying information in the required form */
     public static function p($text, $p = Null, $all = Null) {

@@ -33,11 +33,15 @@ function my_crop($text, $length, $clearTags = true)
 
 /* a function to search an array for an entry string */
 function strpos_arr($haystack, $needle) {
-    if(!is_array($needle)){$needle = array($needle);}
+    if (!is_array($needle))
+        $needle = array($needle);
+
     foreach($needle as $what) {
         $pos = strpos($haystack, $what);
-        if($pos !== false){return true;}
+        if ($pos !== false)
+            return true;
     }
+
     return false;
 }
 
@@ -88,6 +92,12 @@ class PRM
     public static function isHttps() {
         $isHttps = !empty($_SERVER['HTTPS']) && 'off' !== strtolower($_SERVER['HTTPS']);
         return ($isHttps?"https://":"http://");
+    }
+
+    public static function log($arFields, $nameModule = '')
+    {
+        // define("LOG_FILENAME", $_SERVER["DOCUMENT_ROOT"]."/log.txt");  /* in dbconn.php */
+        AddMessage2Log("\n".var_export($arFields, true). " \n \r\n ", $nameModule);
     }
 }
 

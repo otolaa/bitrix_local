@@ -1,16 +1,16 @@
 <h1>Настройка модуля</h1>
 
 <?
-$module_id = "acs";
+$module_id = "local.utility";
 IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/options.php");
 $RIGHT = $APPLICATION->GetGroupRight($module_id);
 if($RIGHT >= "R") :
 
 //
 $arAllOptions = [
-    ["SITE_POLITICS", "Политика сайта", ["textarea",5,50], 'Этот сайт защищен reCAPTCHA и применяются <a href="https://policies.google.com/privacy" rel="nofollow">Политика конфиденциальности</a> и <a href="https://policies.google.com/terms" rel="nofollow">Условия обслуживания</a> Google.'],
-    ["SITE_ERROR", "Сообщение об ошибке", ["textarea",2,50], 'Вопрос не отправлен, так как система определила Вас как робота. Задайте вопрос по телефону, указанному в контактах.'],
-    ["SITE_COOKIE", "Сообщение про куки", ["textarea",2,50], 'Мы используем &#127850;cookie, чтобы сделать сайт максимально удобным для вас.'],
+    ["SITE_POLITICS", "Политика сайта", ["textarea",5,50], ''],
+    ["SITE_ERROR", "Сообщение об ошибке", ["textarea",2,50], ''],
+    ["SITE_COOKIE", "Сообщение про куки", ["textarea",2,50], ''],
     ["ADD_LOG", "Записывать лог", ["checkbox",10], ""],
     ['PHP_CURLOPT_PROXY', 'CURL PROXY для API', ['text',50], ''],
     ["OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", ["text",50], ""],

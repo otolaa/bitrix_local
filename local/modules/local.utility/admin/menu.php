@@ -5,16 +5,16 @@ use \Bitrix\Main\Loader;
 
 loc::loadMessages(__FILE__);
 
-if ($APPLICATION->GetGroupRight("acs") > "D") {
+if ($APPLICATION->GetGroupRight("local.utility") > "D") {
 
-    require_once(Loader::getLocal('modules/acs/prolog.php'));
+    require_once(Loader::getLocal('modules/local.utility/prolog.php'));
 
     // the types menu  dev.1c-bitrix.ru/api_help/main/general/admin.section/menu.php
     $aMenu = [
         "parent_menu" => "global_menu_content", // global_menu_content - раздел "Контент" global_menu_settings - раздел "Настройки"
-        "section" => "acs",
+        "section" => "local.utility",
         "sort" => 880,
-        "module_id" => "acs",
+        "module_id" => "local.utility",
         "text" => 'Вспомогательный модуль',
         "title"=> 'Вспомогательный модуль для дополнительного функционала',
         "icon" => "fileman_menu_icon", // sys_menu_icon bizproc_menu_icon util_menu_icon
@@ -24,7 +24,7 @@ if ($APPLICATION->GetGroupRight("acs") > "D") {
             [
                 "text" => 'Настройки сообщений',
                 "title" => 'Настройки сообщений',
-                "url" => "settings.php?mid=acs&lang=".LANGUAGE_ID,
+                "url" => "settings.php?mid=local.utility&lang=".LANGUAGE_ID,
             ],
             /* [
                 "text" => 'Name menu',

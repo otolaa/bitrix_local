@@ -83,14 +83,14 @@ $APPLICATION->IncludeComponent("acs:acs.kino", ".default",
 ```
 ![acs.kino](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/kino.jpg "acs.kino")
 
-## 5. /local/modules/acs/
+## 5. /local/modules/local.utility/
 this is small module for message in user
 ```php
-\Bitrix\Main\Config\Option::get("acs", "SITE_COOKIE", '');
-\Bitrix\Main\Config\Option::get("acs", "OPENWEATHERMAP_KEY", ''), // key from is openweathermap.org
-/* include class in module "acs" */
-if (\Bitrix\Main\Loader::includeModule('acs')) :  
-	\Bitrix\acs\AcsApi::p('Hi!?', 'p');
+\Bitrix\Main\Config\Option::get("local.utility", "SITE_COOKIE", '');
+\Bitrix\Main\Config\Option::get("local.utility", "OPENWEATHERMAP_KEY", ''), // key from is openweathermap.org
+/* include class in module "local.utility" */
+if (\Bitrix\Main\Loader::includeModule('local.utility')) :  
+	\Local\Utility\Api::p('Hi!?', 'p');
 endif;
 ```
 ![message in user](https://github.com/otolaa/bitrix_local/blob/master/local/templates/bk/img/hm.png "message in user")
