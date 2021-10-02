@@ -41,10 +41,10 @@
         </div>
     </div>
 
-    <? if (Bitrix\Main\Loader::includeModule("acs")) : ?>
+    <? if (Bitrix\Main\Loader::includeModule("local.utility")) : ?>
     <div class="col-12">
         <div class="alert alert-secondary fade show" role="alert">
-            <?=\Bitrix\Main\Config\Option::get("acs", "SITE_COOKIE", '')?>
+            <?=\Bitrix\Main\Config\Option::get("local.utility", "SITE_COOKIE", '')?>
             <button type="button" class="btn btn-secondary btn-sm btn-block mt-2" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">принять</span>
             </button>
