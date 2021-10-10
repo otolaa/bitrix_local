@@ -1,22 +1,24 @@
-<h1>Настройка модуля</h1>
-
 <?
+use \Bitrix\Main\Localization\Loc;
+
+loc::loadMessages(__FILE__);
+
 $module_id = "local.utility";
 IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/options.php");
 $RIGHT = $APPLICATION->GetGroupRight($module_id);
 if($RIGHT >= "R") :
 
-//
 $aTabs = [
     [
         "DIV" => "edit1",
-        "TAB" => GetMessage("MAIN_TAB_SET"), "ICON" => "perfmon_settings",
-        "TITLE" => GetMessage("MAIN_TAB_TITLE_SET"),
+        "TAB" => Loc::getMessage("MAIN_TAB_SET"),
+        "ICON" => "perfmon_settings",
+        "TITLE" => Loc::getMessage("MAIN_TAB_TITLE_SET"),
         "OPTIONS" => [
             "Список сообщений",
             ["SITE_POLITICS", "Политика сайта", null, ["textarea",5,50]],
             ["SITE_ERROR", "Сообщение об ошибке", null, ["textarea",2,50]],
-            ["SITE_COOKIE", "Сообщение про куки", null, ["textarea",2,50]],
+            ["SITE_COOKIE", "Сообщение про cookie", null, ["textarea",2,50]],
             "Для PHP и системы",
             ["ADD_LOG", "Записывать лог", null, ["checkbox",10]],
             //['note' => 'Узел'],
@@ -26,18 +28,20 @@ $aTabs = [
     ],
     [
         "DIV"=>"edit_lending",
-        "TAB"=>"Настройки лендинга", "ICON" => "perfmon_settings",
-        "TITLE"=>"Настройки блоков лендинга",
+        "TAB"=>Loc::getMessage('utility_lending_tab'),
+        "ICON" => "perfmon_settings",
+        "TITLE"=>Loc::getMessage('utility_lending_title'),
         "OPTIONS"=>[
             "Настройки блоков",
-            ["ADD_FORM_FOOTER", "Отображать форму снизу", null, ["checkbox",10]],
+            ["LENDING_TEASER", "Тизер блок", null, ["textarea",2,50]],
+            ["LENDING_ADD_FORM_FOOTER", "Отображать форму снизу", null, ["checkbox",10]],
         ]
     ],
     [
         "DIV" => "edit2",
-        "TAB" => GetMessage("MAIN_TAB_RIGHTS"),
+        "TAB" => Loc::getMessage("MAIN_TAB_RIGHTS"),
         "ICON" => "perfmon_settings",
-        "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS"),
+        "TITLE" => Loc::getMessage("MAIN_TAB_TITLE_RIGHTS"),
     ],
 ];
 
@@ -66,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && strlen($Update.$Apply.$RestoreDefault
 
     LocalRedirect($APPLICATION->GetCurPage()."?mid=".urlencode($module_id)."&lang=".urlencode(LANGUAGE_ID)."&".$tabControl->ActiveTabParam());
 } ?>
-
+<h1><?=Loc::getMessage('utility_h1')?></h1>
 <form method="post" action="<?echo $APPLICATION->GetCurPage()?>?mid=<?=urlencode($module_id)?>&amp;lang=<?=LANGUAGE_ID?>">
     <?
     $tabControl->Begin();
