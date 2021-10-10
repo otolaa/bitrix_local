@@ -7,18 +7,38 @@ $RIGHT = $APPLICATION->GetGroupRight($module_id);
 if($RIGHT >= "R") :
 
 //
-$arAllOptions = [
-    ["SITE_POLITICS", "Политика сайта", ["textarea",5,50], ''],
-    ["SITE_ERROR", "Сообщение об ошибке", ["textarea",2,50], ''],
-    ["SITE_COOKIE", "Сообщение про куки", ["textarea",2,50], ''],
-    ["ADD_LOG", "Записывать лог", ["checkbox",10], ""],
-    ['PHP_CURLOPT_PROXY', 'CURL PROXY для API', ['text',50], ''],
-    ["OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", ["text",50], ""],
-];
-
 $aTabs = [
-    ["DIV" => "edit1", "TAB" => GetMessage("MAIN_TAB_SET"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_SET")],
-    ["DIV" => "edit2", "TAB" => GetMessage("MAIN_TAB_RIGHTS"), "ICON" => "perfmon_settings", "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS")],
+    [
+        "DIV" => "edit1",
+        "TAB" => GetMessage("MAIN_TAB_SET"), "ICON" => "perfmon_settings",
+        "TITLE" => GetMessage("MAIN_TAB_TITLE_SET"),
+        "OPTIONS" => [
+            "Список сообщений",
+            ["SITE_POLITICS", "Политика сайта", null, ["textarea",5,50]],
+            ["SITE_ERROR", "Сообщение об ошибке", null, ["textarea",2,50]],
+            ["SITE_COOKIE", "Сообщение про куки", null, ["textarea",2,50]],
+            "Для PHP и системы",
+            ["ADD_LOG", "Записывать лог", null, ["checkbox",10]],
+            //['note' => 'Узел'],
+            ["OPENWEATHERMAP_KEY", "Открытый ключ api.openweathermap.org", null, ["text",50]],
+            ['PHP_CURLOPT_PROXY', 'CURL PROXY для API', null, ['text',50]],
+        ]
+    ],
+    [
+        "DIV"=>"edit_lending",
+        "TAB"=>"Настройки лендинга", "ICON" => "perfmon_settings",
+        "TITLE"=>"Настройки блоков лендинга",
+        "OPTIONS"=>[
+            "Настройки блоков",
+            ["ADD_FORM_FOOTER", "Отображать форму снизу", null, ["checkbox",10]],
+        ]
+    ],
+    [
+        "DIV" => "edit2",
+        "TAB" => GetMessage("MAIN_TAB_RIGHTS"),
+        "ICON" => "perfmon_settings",
+        "TITLE" => GetMessage("MAIN_TAB_TITLE_RIGHTS"),
+    ],
 ];
 
 $tabControl = new CAdminTabControl("tabControl", $aTabs);
@@ -33,12 +53,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && strlen($Update.$Apply.$RestoreDefault
         COption::RemoveOption("WE_ARE_CLOSED_TEXT_TITLE");
     else
     {
-        foreach($arAllOptions as $arOption)
+        foreach ($aTabs as $aTab)
         {
-            $name=$arOption[0];
-            $val=$_REQUEST[$name];
-            // @todo: проверка безопасности должна быть тут!
-            COption::SetOptionString($module_id, $name, $val);
+            __AdmSettingsSaveOptions($module_id, $aTab['OPTIONS']);
         }
     }
 
@@ -53,27 +70,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && strlen($Update.$Apply.$RestoreDefault
 <form method="post" action="<?echo $APPLICATION->GetCurPage()?>?mid=<?=urlencode($module_id)?>&amp;lang=<?=LANGUAGE_ID?>">
     <?
     $tabControl->Begin();
-    $tabControl->BeginNextTab();
-    foreach($arAllOptions as $f=>$arOption):
-        $val = COption::GetOptionString($module_id, $arOption[0], $arOption[3]);
-        $type = $arOption[2]; ?>
-        <tr>
-            <td width="40%" nowrap <?if($type[0]=="textarea") echo 'class="adm-detail-valign-top"'?>>
-                <label for="<?echo htmlspecialcharsbx($arOption[0])?>"><?echo $arOption[1]?>:</label>
-            <td width="60%">
-                <?if($type[0]=="checkbox"):?>
-                    <input type="checkbox" name="<?echo htmlspecialcharsbx($arOption[0])?>" id="<?echo htmlspecialcharsbx($arOption[0])?>" value="Y"<?if($val=="Y")echo" checked";?>>
-                <?elseif($type[0]=="text"):?>
-                    <input type="text" size="<?echo $type[1]?>" maxlength="255" value="<?echo htmlspecialcharsbx($val)?>" name="<?echo htmlspecialcharsbx($arOption[0])?>" id="<?echo htmlspecialcharsbx($arOption[0])?>"><?if($arOption[0] == "slow_sql_time") echo GetMessage("PERFMON_OPTIONS_SLOW_SQL_TIME_SEC")?>
-                <?elseif($type[0]=="textarea"):?>
-                    <textarea rows="<?echo $type[1]?>" cols="<?echo $type[2]?>" name="<?echo htmlspecialcharsbx($arOption[0])?>" id="<?echo htmlspecialcharsbx($arOption[0])?>"><?echo htmlspecialcharsbx($val)?></textarea>
-                <?endif?>
-            </td>
-        </tr>
-    <?endforeach?>
-    <?$tabControl->BeginNextTab();?>
-    <?require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/admin/group_rights.php");?>
-    <?$tabControl->Buttons();?>
+    foreach ($aTabs as $aTab)
+    {
+        $tabControl->BeginNextTab();
+        __AdmSettingsDrawList($module_id, $aTab['OPTIONS']);
+    }
+    require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/admin/group_rights.php");
+    $tabControl->Buttons(); ?>
     <input <?if ($RIGHT<"W") echo "disabled" ?> type="submit" name="Update" value="<?=GetMessage("MAIN_SAVE")?>" title="<?=GetMessage("MAIN_OPT_SAVE_TITLE")?>" class="adm-btn-save">
     <input <?if ($RIGHT<"W") echo "disabled" ?> type="submit" name="Apply" value="<?=GetMessage("MAIN_OPT_APPLY")?>" title="<?=GetMessage("MAIN_OPT_APPLY_TITLE")?>">
     <?if(strlen($_REQUEST["back_url_settings"])>0):?>
