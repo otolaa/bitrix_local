@@ -55,7 +55,7 @@ class AcsCurrencyClassAdd extends \CBitrixComponent
     {
         $cbr_xml_ = NULL;
         $xml = simplexml_load_string($this->sendToAPI());
-        if($xml ===  FALSE){
+        if ($xml ===  FALSE) {
             // deal with error
             return FALSE;
         }
@@ -63,8 +63,8 @@ class AcsCurrencyClassAdd extends \CBitrixComponent
         $dt_ = (string)$xml->attributes()->Date;
         $cbr = [];
         $i=0;
-        foreach ($xml->Valute AS $currency_){
-            foreach ($currency_ AS $val_){
+        foreach ($xml->Valute AS $currency_) {
+            foreach ($currency_ AS $val_) {
                 $cbr[$i][] = (string)$val_;
             }
             $i++;
