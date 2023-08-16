@@ -1,4 +1,4 @@
-<?if(!check_bitrix_sessid()) return;
+<?php if(!check_bitrix_sessid()) return;
 
 echo CAdminMessage::ShowNote("Вспомогательный модуль успешно удален из системы"); ?>
 

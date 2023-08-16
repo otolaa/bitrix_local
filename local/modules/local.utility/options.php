@@ -1,4 +1,4 @@
-<?
+<?php
 use \Bitrix\Main\Localization\Loc;
 
 loc::loadMessages(__FILE__);
