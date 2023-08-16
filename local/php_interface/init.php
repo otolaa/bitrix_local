@@ -1,17 +1,15 @@
-<? /* minimal set of functions for a real gentleman */
+<?php /* minimal set of functions for a real gentleman */
 
 /* Debug function for displaying information in the required form */
 function p($text, $p = Null, $all = Null) {
-    global $USER;
-    if ($USER->IsAdmin() || $all == "all") {
+    if (\Bitrix\Main\Engine\CurrentUser::get()->isAdmin() || $all == "all") {
         echo "<pre>";
-        if($p == "p") {
+        if ($p == "p")
             print_r($text);
-        } elseif($p == "export") {
+        elseif ($p == "export")
             var_export($text);
-        } else {
+        else
             var_dump($text);
-        }
         echo "</pre>";
     }
 }
